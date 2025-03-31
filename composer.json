@@ -7,12 +7,6 @@
         "framework"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../protrack-api"
-        }
-    ],
     "require": {
         "php": "^8.2",
         "barryvdh/laravel-dompdf": "^3.0",
