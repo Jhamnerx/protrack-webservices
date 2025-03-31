@@ -37,10 +37,15 @@ class Processor implements UnitProcessorInterface
 
                     if ($device->services['sutran']['active'] ?? false) {
 
-                        if ($unit['datastatus'] == "2") {
+                        if ($unit['datastatus'] == "2" || $unit['datastatus'] == "4") {
 
                             $result['sutran'][] = $unit;
                         }
+                    }
+
+                    if ($unit['datastatus'] == "4") {
+                        $deviceTime = Carbon::parse($unit['hearttime'])->setTimezone('America/Lima');
+                        $unit['fecha_hora'] = $deviceTime->format('Y-m-d H:i:s');
                     }
                 }
             }
