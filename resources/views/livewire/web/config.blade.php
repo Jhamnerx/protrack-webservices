@@ -136,8 +136,6 @@
                                     <!-- Table body -->
                                     <tbody class="text-sm divide-y divide-slate-200 dark:divide-slate-700">
                                         <!-- Row -->
-                                        {{ json_encode($unidades->items()) }}
-
                                         @foreach ($unidades as $key => $unit)
                                             <tr wire:key="device-{{ $unit->id }}">
                                                 <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">

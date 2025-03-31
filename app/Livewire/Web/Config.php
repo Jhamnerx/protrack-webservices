@@ -66,7 +66,6 @@ class Config extends Component
 
     public function fetchAndStoreDevices()
     {
-
         try {
             // Instancia el servicio de Protrack
             $protrackService = new ProtrackApiService();
@@ -74,7 +73,7 @@ class Config extends Component
             $devices = $protrackService->fetchDevices();
 
             $services = $this->servicios->keys()->all();
-            // Recorre y almacena (o actualiza) cada dispositivo
+            // Recorre y almacena (o crea) cada dispositivo
             foreach ($devices as $deviceData) {
                 // Inicializa un array para los servicios de esta unidad
                 $unitServices = [];
@@ -84,21 +83,23 @@ class Config extends Component
                     $unitServices[$service] = ['active' => false];
                 }
 
-                $device = Devices::firstOrNew(['imei' => $deviceData['imei']]);
-                $device->name = $deviceData['devicename'] ?? null;
-                $device->plate = $deviceData['platenumber'] ?? null;
-                $device->type = $deviceData['devicetype'] ?? null;
-                $device->simcard = $deviceData['simcard'] ?? null;
-                $device->services = $unitServices;
-
-                if (!empty($deviceData['onlinetime']) && $deviceData['onlinetime'] > 0) {
-                    $device->last_update = Carbon::createFromTimestamp($deviceData['onlinetime']);
-                }
-                $device->last_position = $deviceData['platformduetime'] ?? null;
-                $device->save();
+                // Crea el dispositivo solo si no existe
+                Devices::firstOrCreate(
+                    ['imei' => $deviceData['imei']], // Condición para buscar el dispositivo
+                    [ // Valores para crear el dispositivo si no existe
+                        'name' => $deviceData['devicename'] ?? null,
+                        'plate' => $deviceData['platenumber'] ?? null,
+                        'type' => $deviceData['devicetype'] ?? null,
+                        'simcard' => $deviceData['simcard'] ?? null,
+                        'services' => $unitServices,
+                        'last_update' => !empty($deviceData['onlinetime']) && $deviceData['onlinetime'] > 0
+                            ? Carbon::createFromTimestamp($deviceData['onlinetime'])
+                            : null,
+                        'last_position' => $deviceData['platformduetime'] ?? null,
+                    ]
+                );
             }
         } catch (\Exception $e) {
-            dd($e->getMessage());
             $this->dispatch(
                 'notify-toast',
                 icon: 'error',
@@ -107,8 +108,6 @@ class Config extends Component
             );
         }
     }
-
-
 
     public function save()
     {
