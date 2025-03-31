@@ -32,7 +32,8 @@ class Processor implements UnitProcessorInterface
                 $deviceTime = Carbon::parse($unit['gpstime'])->setTimezone('America/Lima');
                 $unit['fecha_hora'] = $deviceTime->format('Y-m-d H:i:s');
                 $deviceLastUpdate = Carbon::parse($device->last_update);
-
+                Log::info('deviceTime: ' . $deviceTime->format('Y-m-d H:i:s'));
+                Log::info('deviceLastUpdate: ' . $deviceLastUpdate->format('Y-m-d H:i:s'));
                 if ($deviceTime->format('Y-m-d H:i:s') != $deviceLastUpdate->format('Y-m-d H:i:s')) {
 
                     if ($device->services['sutran']['active'] ?? false) {
