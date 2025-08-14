@@ -75,6 +75,11 @@ class ProcessUnitsJob implements ShouldQueue
 
                 SendToSutranJob::dispatch($processedUnits['sutran']);
             }
+
+        if ($config->servicios['osinergmin']['status'])
+            if (!empty($processedUnits['osinergmin'])) {
+                SendToOsinergminJob::dispatch($processedUnits['osinergmin'], 'NavixyDevices');
+            }
     }
 
     private function filterSutranDevices($devices)

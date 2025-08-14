@@ -22,7 +22,6 @@ class OsinergminFormatter implements UnitFormatterInterface
 
         return array_map(function ($unit) {
 
-
             $device = Devices::where('imei', $unit['imei'])->first();
 
             $config = Config::first();
@@ -30,18 +29,18 @@ class OsinergminFormatter implements UnitFormatterInterface
             return [
                 'id' => $unit['id'],
                 'event' => 'none',
-                'gpsDate' => gmdate('Y-m-d\TH:i:s.v\Z', $unit['signalTime']),
-                'plate' => trim($device->plate),
+                'gpsDate' => gmdate('Y-m-d\TH:i:s.v\Z', $unit['hearttime']),
+                'plate' => trim($unit['plate']),
                 'speed' => intval($unit['speed']),
                 'position' => [
-                    'latitude' => doubleval($unit['location']['lat']),
-                    'longitude' => doubleval($unit['location']['lng']),
+                    'latitude' => doubleval($unit['latitude']),
+                    'longitude' => doubleval($unit['longitude']),
                     'altitude' => doubleval(0),
                 ],
                 'tokenTrama' => $config->servicios['osinergmin']['token'],
-                'odometer' => round(0, 2),
-                'imei' => intval($device->imei),
-                'idTrama' => 0,
+                'odometer' => round($unit['odometer'] ?? 0, 2),
+                'imei' => intval($unit['imei']),
+                'idTrama' => $unit['hearttime'],
             ];
         }, $normalizedUnits);
     }

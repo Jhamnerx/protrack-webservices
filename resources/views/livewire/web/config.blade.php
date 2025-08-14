@@ -269,7 +269,41 @@
                                 rounded="md" label="Guardar" />
                         </div>
                     </div>
+                    <div
+                        class="col-span-12 md:col-span-3 grid grid-cols-12 gap-4 bg-white dark:bg-gray-800 items-start border rounded-md m-3 p-4">
 
+                        <div class="col-span-12 text-center ">
+
+                            <img src="https://cdn.www.gob.pe/uploads/document/file/5224085/Logotipo%20azul%20sin%20descriptor-01.jpg"
+                                alt="">
+                        </div>
+
+                        <div class="col-span-6 text-center ">
+
+                            <x-form.checkbox left-label="Activo" value="true" lg id="servicio"
+                                wire:model.live="servicios.osinergmin.status" />
+
+                        </div>
+
+                        <div class="col-span-6 text-center ">
+
+                            <x-form.checkbox left-label="Logs Activos" value="true" lg id="servicio"
+                                wire:model.live="servicios.osinergmin.enabled_logs" />
+
+                        </div>
+                        @if ($servicios['osinergmin']['status'])
+                            <div class="col-span-12">
+
+                                <x-form.input wire:model.live="servicios.osinergmin.token" label="Token:"
+                                    description="Ingresa tu token de transmisión" />
+                            </div>
+                        @endif
+
+                        <div class="col-span-12 text-center flex justify-end">
+                            <x-form.button wire:click="saveServicioOsinergmin" spinner="saveServicioOsinergmin"
+                                Positive rounded="md" label="Guardar" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

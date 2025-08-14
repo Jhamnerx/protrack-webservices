@@ -100,6 +100,7 @@ class Config extends Component
                 );
             }
         } catch (\Exception $e) {
+
             $this->dispatch(
                 'notify-toast',
                 icon: 'error',
@@ -194,6 +195,36 @@ class Config extends Component
         );
     }
 
+    public function saveServicioOsinergmin()
+    {
+
+        $this->validate(
+            [
+                'servicios.osinergmin.token' => 'required_if:servicios.osinergmin.status,true|regex:/^[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}$/',
+            ],
+            [
+                'servicios.osinergmin.token.regex' => 'El token debe tener 32 caracteres alfanuméricos',
+                'servicios.osinergmin.token.required_if' => 'El token es requerido cuando el servicio está activo',
+
+            ]
+        );
+
+        $nuevosServicios = array_merge(
+            $this->config->servicios,
+            ['osinergmin' => $this->servicios['osinergmin']]
+        );
+
+        $this->config->update([
+            'servicios' => $nuevosServicios,
+        ]);
+
+        $this->dispatch(
+            'notify-toast',
+            icon: 'success',
+            title: 'SERVICIO ACTUALIZADO',
+            mensaje: 'El servicio de OSINERGMIN se ha actualizado correctamente'
+        );
+    }
 
     public function updatedServicios($value, $name)
     {

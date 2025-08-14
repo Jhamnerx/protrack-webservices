@@ -30,11 +30,13 @@ class Processor implements UnitProcessorInterface
             if ($device) {
 
                 $deviceTime = Carbon::parse($unit['gpstime'])->setTimezone('America/Lima');
-                $unit['fecha_hora'] = $deviceTime->format('Y-m-d H:i:s');
-                $deviceLastUpdate = Carbon::parse($device->last_update);
 
-                Log::info("deviceTime: " . $deviceTime->format('Y-m-d H:i:s') . " deviceLastUpdate: " . $deviceLastUpdate->format('Y-m-d H:i:s') . " unit: " . json_encode($unit));
-                if ($deviceTime->format('Y-m-d H:i:s') != $deviceLastUpdate->format('Y-m-d H:i:s')) {
+                $deviceLastUpdate = Carbon::parse($device->last_update);
+                $ultimo_envio_date = Carbon::parse($unit['hearttime'])->setTimezone('America/Lima');
+                $unit['fecha_hora'] = $ultimo_envio_date->format('Y-m-d H:i:s');
+                //VERIFICAR ULTIMA FECHA Y HORA ENVIADA PARA NO ENVIAR INFORMACION REPETIDA
+                Log::info('fecha actualizacion db: ' . $deviceLastUpdate->format('Y-m-d H:i:s') . ' fecha dispositivo: ' . $deviceTime->format('Y-m-d H:i:s') . ' fecha ultimo envio: ' . $ultimo_envio_date->format('Y-m-d H:i:s'));
+                if ($ultimo_envio_date->format('Y-m-d H:i:s') != $deviceLastUpdate->format('Y-m-d H:i:s')) {
 
                     if ($device->services['sutran']['active'] ?? false) {
 
@@ -44,9 +46,17 @@ class Processor implements UnitProcessorInterface
                         }
                     }
 
+                    if ($device->services['osinergmin']['active'] ?? false) {
+
+                        if ($unit['datastatus'] == "2" || $unit['datastatus'] == "4") {
+
+                            $result['osinergmin'][] = $unit;
+                        }
+                    }
+
                     if ($unit['datastatus'] == "4") {
-                        $deviceTime = Carbon::parse($unit['hearttime'])->setTimezone('America/Lima');
-                        $unit['fecha_hora'] = $deviceTime->format('Y-m-d H:i:s');
+
+                        $unit['fecha_hora'] = $ultimo_envio_date->format('Y-m-d H:i:s');
                     }
                 }
             }

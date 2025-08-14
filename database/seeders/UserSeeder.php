@@ -29,6 +29,11 @@ class UserSeeder extends Seeder
                         'status' => 0,
                         'enabled_logs' => 0
                     ],
+                    'osinergmin' => [
+                        'token' => '',
+                        'status' => 0,
+                        'enabled_logs' => 0
+                    ],
                 ]
             ]
         );

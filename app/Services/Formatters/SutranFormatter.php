@@ -34,7 +34,7 @@ class SutranFormatter implements UnitFormatterInterface
                 'speed' => intval($unit['speed']),
                 'time_device' => $unit['fecha_hora'],
                 'imei' => intval($unit['imei']),
-                'idTrama' => 0,
+                'idTrama' => $unit['hearttime'],
             ];
         }, $normalizedUnits);
     }
