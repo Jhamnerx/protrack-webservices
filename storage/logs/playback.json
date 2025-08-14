@@ -1,0 +1,4310 @@
+{
+    "records": [
+        {
+            "longitude": -71.522872,
+            "latitude": -16.397273,
+            "gpstime": 1755185699,
+            "speed": 0,
+            "course": 222,
+            "datetime": "2025-08-14 10:34:59"
+        },
+        {
+            "longitude": -71.52287,
+            "latitude": -16.397272,
+            "gpstime": 1755185709,
+            "speed": 0,
+            "course": 222,
+            "datetime": "2025-08-14 10:35:09"
+        },
+        {
+            "longitude": -71.522869,
+            "latitude": -16.397272,
+            "gpstime": 1755185719,
+            "speed": 0,
+            "course": 222,
+            "datetime": "2025-08-14 10:35:19"
+        },
+        {
+            "longitude": -71.522868,
+            "latitude": -16.397273,
+            "gpstime": 1755185730,
+            "speed": 0,
+            "course": 222,
+            "datetime": "2025-08-14 10:35:30"
+        },
+        {
+            "longitude": -71.522867,
+            "latitude": -16.397273,
+            "gpstime": 1755185740,
+            "speed": 0,
+            "course": 222,
+            "datetime": "2025-08-14 10:35:40"
+        },
+        {
+            "longitude": -71.522867,
+            "latitude": -16.397272,
+            "gpstime": 1755185750,
+            "speed": 0,
+            "course": 222,
+            "datetime": "2025-08-14 10:35:50"
+        },
+        {
+            "longitude": -71.522786,
+            "latitude": -16.397183,
+            "gpstime": 1755185757,
+            "speed": 16,
+            "course": 54,
+            "datetime": "2025-08-14 10:35:57"
+        },
+        {
+            "longitude": -71.522375,
+            "latitude": -16.396849,
+            "gpstime": 1755185767,
+            "speed": 20,
+            "course": 50,
+            "datetime": "2025-08-14 10:36:07"
+        },
+        {
+            "longitude": -71.522215,
+            "latitude": -16.396704,
+            "gpstime": 1755185778,
+            "speed": 5,
+            "course": 48,
+            "datetime": "2025-08-14 10:36:18"
+        },
+        {
+            "longitude": -71.522044,
+            "latitude": -16.396714,
+            "gpstime": 1755185788,
+            "speed": 16,
+            "course": 124,
+            "datetime": "2025-08-14 10:36:28"
+        },
+        {
+            "longitude": -71.521697,
+            "latitude": -16.396959,
+            "gpstime": 1755185798,
+            "speed": 17,
+            "course": 121,
+            "datetime": "2025-08-14 10:36:38"
+        },
+        {
+            "longitude": -71.521207,
+            "latitude": -16.397242,
+            "gpstime": 1755185809,
+            "speed": 22,
+            "course": 125,
+            "datetime": "2025-08-14 10:36:49"
+        },
+        {
+            "longitude": -71.52077,
+            "latitude": -16.397491,
+            "gpstime": 1755185819,
+            "speed": 11,
+            "course": 112,
+            "datetime": "2025-08-14 10:36:59"
+        },
+        {
+            "longitude": -71.520438,
+            "latitude": -16.397674,
+            "gpstime": 1755185829,
+            "speed": 18,
+            "course": 121,
+            "datetime": "2025-08-14 10:37:09"
+        },
+        {
+            "longitude": -71.520003,
+            "latitude": -16.397915,
+            "gpstime": 1755185840,
+            "speed": 18,
+            "course": 114,
+            "datetime": "2025-08-14 10:37:20"
+        },
+        {
+            "longitude": -71.519516,
+            "latitude": -16.398166,
+            "gpstime": 1755185850,
+            "speed": 21,
+            "course": 115,
+            "datetime": "2025-08-14 10:37:30"
+        },
+        {
+            "longitude": -71.518989,
+            "latitude": -16.398347,
+            "gpstime": 1755185860,
+            "speed": 19,
+            "course": 101,
+            "datetime": "2025-08-14 10:37:40"
+        },
+        {
+            "longitude": -71.51843,
+            "latitude": -16.398493,
+            "gpstime": 1755185871,
+            "speed": 19,
+            "course": 101,
+            "datetime": "2025-08-14 10:37:51"
+        },
+        {
+            "longitude": -71.51818,
+            "latitude": -16.398539,
+            "gpstime": 1755185881,
+            "speed": 0,
+            "course": 72,
+            "datetime": "2025-08-14 10:38:01"
+        },
+        {
+            "longitude": -71.518099,
+            "latitude": -16.398565,
+            "gpstime": 1755185891,
+            "speed": 16,
+            "course": 109,
+            "datetime": "2025-08-14 10:38:11"
+        },
+        {
+            "longitude": -71.517445,
+            "latitude": -16.398714,
+            "gpstime": 1755185902,
+            "speed": 25,
+            "course": 104,
+            "datetime": "2025-08-14 10:38:22"
+        },
+        {
+            "longitude": -71.516907,
+            "latitude": -16.398824,
+            "gpstime": 1755185912,
+            "speed": 13,
+            "course": 111,
+            "datetime": "2025-08-14 10:38:32"
+        },
+        {
+            "longitude": -71.516759,
+            "latitude": -16.398869,
+            "gpstime": 1755185922,
+            "speed": 1,
+            "course": 95,
+            "datetime": "2025-08-14 10:38:42"
+        },
+        {
+            "longitude": -71.516774,
+            "latitude": -16.398883,
+            "gpstime": 1755185933,
+            "speed": 2,
+            "course": 95,
+            "datetime": "2025-08-14 10:38:53"
+        },
+        {
+            "longitude": -71.516799,
+            "latitude": -16.398906,
+            "gpstime": 1755185943,
+            "speed": 0,
+            "course": 95,
+            "datetime": "2025-08-14 10:39:03"
+        },
+        {
+            "longitude": -71.516789,
+            "latitude": -16.39891,
+            "gpstime": 1755185954,
+            "speed": 0,
+            "course": 95,
+            "datetime": "2025-08-14 10:39:14"
+        },
+        {
+            "longitude": -71.516779,
+            "latitude": -16.398905,
+            "gpstime": 1755185964,
+            "speed": 0,
+            "course": 95,
+            "datetime": "2025-08-14 10:39:24"
+        },
+        {
+            "longitude": -71.516772,
+            "latitude": -16.398899,
+            "gpstime": 1755185974,
+            "speed": 0,
+            "course": 95,
+            "datetime": "2025-08-14 10:39:34"
+        },
+        {
+            "longitude": -71.516765,
+            "latitude": -16.398896,
+            "gpstime": 1755185985,
+            "speed": 0,
+            "course": 95,
+            "datetime": "2025-08-14 10:39:45"
+        },
+        {
+            "longitude": -71.516727,
+            "latitude": -16.398898,
+            "gpstime": 1755185995,
+            "speed": 6,
+            "course": 111,
+            "datetime": "2025-08-14 10:39:55"
+        },
+        {
+            "longitude": -71.516522,
+            "latitude": -16.398917,
+            "gpstime": 1755186005,
+            "speed": 0,
+            "course": 84,
+            "datetime": "2025-08-14 10:40:05"
+        },
+        {
+            "longitude": -71.516483,
+            "latitude": -16.398924,
+            "gpstime": 1755186016,
+            "speed": 5,
+            "course": 92,
+            "datetime": "2025-08-14 10:40:16"
+        },
+        {
+            "longitude": -71.516457,
+            "latitude": -16.398938,
+            "gpstime": 1755186026,
+            "speed": 0,
+            "course": 85,
+            "datetime": "2025-08-14 10:40:26"
+        },
+        {
+            "longitude": -71.516389,
+            "latitude": -16.398933,
+            "gpstime": 1755186036,
+            "speed": 3,
+            "course": 85,
+            "datetime": "2025-08-14 10:40:36"
+        },
+        {
+            "longitude": -71.516266,
+            "latitude": -16.398935,
+            "gpstime": 1755186041,
+            "speed": 20,
+            "course": 107,
+            "datetime": "2025-08-14 10:40:41"
+        },
+        {
+            "longitude": -71.51555,
+            "latitude": -16.399042,
+            "gpstime": 1755186051,
+            "speed": 33,
+            "course": 97,
+            "datetime": "2025-08-14 10:40:51"
+        },
+        {
+            "longitude": -71.514678,
+            "latitude": -16.399149,
+            "gpstime": 1755186062,
+            "speed": 27,
+            "course": 95,
+            "datetime": "2025-08-14 10:41:02"
+        },
+        {
+            "longitude": -71.514428,
+            "latitude": -16.399165,
+            "gpstime": 1755186072,
+            "speed": 0,
+            "course": 93,
+            "datetime": "2025-08-14 10:41:12"
+        },
+        {
+            "longitude": -71.514435,
+            "latitude": -16.399167,
+            "gpstime": 1755186083,
+            "speed": 0,
+            "course": 93,
+            "datetime": "2025-08-14 10:41:23"
+        },
+        {
+            "longitude": -71.514378,
+            "latitude": -16.399243,
+            "gpstime": 1755186093,
+            "speed": 4,
+            "course": 177,
+            "datetime": "2025-08-14 10:41:33"
+        },
+        {
+            "longitude": -71.514379,
+            "latitude": -16.399282,
+            "gpstime": 1755186103,
+            "speed": 4,
+            "course": 180,
+            "datetime": "2025-08-14 10:41:43"
+        },
+        {
+            "longitude": -71.514405,
+            "latitude": -16.399541,
+            "gpstime": 1755186114,
+            "speed": 18,
+            "course": 165,
+            "datetime": "2025-08-14 10:41:54"
+        },
+        {
+            "longitude": -71.514375,
+            "latitude": -16.399578,
+            "gpstime": 1755186115,
+            "speed": 20,
+            "course": 121,
+            "datetime": "2025-08-14 10:41:55"
+        },
+        {
+            "longitude": -71.51427,
+            "latitude": -16.399608,
+            "gpstime": 1755186117,
+            "speed": 22,
+            "course": 95,
+            "datetime": "2025-08-14 10:41:57"
+        },
+        {
+            "longitude": -71.513613,
+            "latitude": -16.399648,
+            "gpstime": 1755186129,
+            "speed": 5,
+            "course": 123,
+            "datetime": "2025-08-14 10:42:09"
+        },
+        {
+            "longitude": -71.513581,
+            "latitude": -16.39973,
+            "gpstime": 1755186134,
+            "speed": 13,
+            "course": 182,
+            "datetime": "2025-08-14 10:42:14"
+        },
+        {
+            "longitude": -71.513609,
+            "latitude": -16.400084,
+            "gpstime": 1755186145,
+            "speed": 13,
+            "course": 187,
+            "datetime": "2025-08-14 10:42:25"
+        },
+        {
+            "longitude": -71.513637,
+            "latitude": -16.400339,
+            "gpstime": 1755186155,
+            "speed": 2,
+            "course": 207,
+            "datetime": "2025-08-14 10:42:35"
+        },
+        {
+            "longitude": -71.513635,
+            "latitude": -16.400346,
+            "gpstime": 1755186165,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 10:42:45"
+        },
+        {
+            "longitude": -71.51364,
+            "latitude": -16.400373,
+            "gpstime": 1755186176,
+            "speed": 1,
+            "course": 207,
+            "datetime": "2025-08-14 10:42:56"
+        },
+        {
+            "longitude": -71.513647,
+            "latitude": -16.400367,
+            "gpstime": 1755186186,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 10:43:06"
+        },
+        {
+            "longitude": -71.51365,
+            "latitude": -16.400367,
+            "gpstime": 1755186196,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 10:43:16"
+        },
+        {
+            "longitude": -71.513664,
+            "latitude": -16.400367,
+            "gpstime": 1755186207,
+            "speed": 1,
+            "course": 207,
+            "datetime": "2025-08-14 10:43:27"
+        },
+        {
+            "longitude": -71.513674,
+            "latitude": -16.400375,
+            "gpstime": 1755186217,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 10:43:37"
+        },
+        {
+            "longitude": -71.51369,
+            "latitude": -16.400352,
+            "gpstime": 1755187720,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 11:08:40"
+        },
+        {
+            "longitude": -71.513683,
+            "latitude": -16.40036,
+            "gpstime": 1755187730,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 11:08:50"
+        },
+        {
+            "longitude": -71.513675,
+            "latitude": -16.400371,
+            "gpstime": 1755187740,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 11:09:00"
+        },
+        {
+            "longitude": -71.513679,
+            "latitude": -16.400384,
+            "gpstime": 1755187751,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 11:09:11"
+        },
+        {
+            "longitude": -71.513679,
+            "latitude": -16.400381,
+            "gpstime": 1755187761,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 11:09:21"
+        },
+        {
+            "longitude": -71.513678,
+            "latitude": -16.400371,
+            "gpstime": 1755187771,
+            "speed": 0,
+            "course": 207,
+            "datetime": "2025-08-14 11:09:31"
+        },
+        {
+            "longitude": -71.513722,
+            "latitude": -16.40052,
+            "gpstime": 1755187780,
+            "speed": 14,
+            "course": 187,
+            "datetime": "2025-08-14 11:09:40"
+        },
+        {
+            "longitude": -71.513797,
+            "latitude": -16.400959,
+            "gpstime": 1755187790,
+            "speed": 15,
+            "course": 183,
+            "datetime": "2025-08-14 11:09:50"
+        },
+        {
+            "longitude": -71.513702,
+            "latitude": -16.401048,
+            "gpstime": 1755187797,
+            "speed": 14,
+            "course": 34,
+            "datetime": "2025-08-14 11:09:57"
+        },
+        {
+            "longitude": -71.513615,
+            "latitude": -16.400915,
+            "gpstime": 1755187801,
+            "speed": 11,
+            "course": 62,
+            "datetime": "2025-08-14 11:10:01"
+        },
+        {
+            "longitude": -71.513554,
+            "latitude": -16.400831,
+            "gpstime": 1755187811,
+            "speed": 4,
+            "course": 48,
+            "datetime": "2025-08-14 11:10:11"
+        },
+        {
+            "longitude": -71.513286,
+            "latitude": -16.400572,
+            "gpstime": 1755187821,
+            "speed": 24,
+            "course": 48,
+            "datetime": "2025-08-14 11:10:21"
+        },
+        {
+            "longitude": -71.51264,
+            "latitude": -16.400051,
+            "gpstime": 1755187831,
+            "speed": 36,
+            "course": 52,
+            "datetime": "2025-08-14 11:10:31"
+        },
+        {
+            "longitude": -71.512144,
+            "latitude": -16.399765,
+            "gpstime": 1755187843,
+            "speed": 15,
+            "course": 100,
+            "datetime": "2025-08-14 11:10:43"
+        },
+        {
+            "longitude": -71.5116,
+            "latitude": -16.3998,
+            "gpstime": 1755187853,
+            "speed": 20,
+            "course": 86,
+            "datetime": "2025-08-14 11:10:53"
+        },
+        {
+            "longitude": -71.511492,
+            "latitude": -16.399767,
+            "gpstime": 1755187855,
+            "speed": 19,
+            "course": 62,
+            "datetime": "2025-08-14 11:10:55"
+        },
+        {
+            "longitude": -71.511443,
+            "latitude": -16.399704,
+            "gpstime": 1755187857,
+            "speed": 12,
+            "course": 0,
+            "datetime": "2025-08-14 11:10:57"
+        },
+        {
+            "longitude": -71.511451,
+            "latitude": -16.399638,
+            "gpstime": 1755187859,
+            "speed": 14,
+            "course": 340,
+            "datetime": "2025-08-14 11:10:59"
+        },
+        {
+            "longitude": -71.511513,
+            "latitude": -16.399583,
+            "gpstime": 1755187861,
+            "speed": 19,
+            "course": 288,
+            "datetime": "2025-08-14 11:11:01"
+        },
+        {
+            "longitude": -71.511654,
+            "latitude": -16.399607,
+            "gpstime": 1755187864,
+            "speed": 18,
+            "course": 235,
+            "datetime": "2025-08-14 11:11:04"
+        },
+        {
+            "longitude": -71.511864,
+            "latitude": -16.399695,
+            "gpstime": 1755187869,
+            "speed": 21,
+            "course": 263,
+            "datetime": "2025-08-14 11:11:09"
+        },
+        {
+            "longitude": -71.512584,
+            "latitude": -16.399672,
+            "gpstime": 1755187880,
+            "speed": 28,
+            "course": 276,
+            "datetime": "2025-08-14 11:11:20"
+        },
+        {
+            "longitude": -71.513372,
+            "latitude": -16.399612,
+            "gpstime": 1755187890,
+            "speed": 22,
+            "course": 272,
+            "datetime": "2025-08-14 11:11:30"
+        },
+        {
+            "longitude": -71.513489,
+            "latitude": -16.399604,
+            "gpstime": 1755187900,
+            "speed": 0,
+            "course": 255,
+            "datetime": "2025-08-14 11:11:40"
+        },
+        {
+            "longitude": -71.513562,
+            "latitude": -16.399667,
+            "gpstime": 1755187905,
+            "speed": 17,
+            "course": 187,
+            "datetime": "2025-08-14 11:11:45"
+        },
+        {
+            "longitude": -71.513591,
+            "latitude": -16.400022,
+            "gpstime": 1755187915,
+            "speed": 11,
+            "course": 181,
+            "datetime": "2025-08-14 11:11:55"
+        },
+        {
+            "longitude": -71.513575,
+            "latitude": -16.400067,
+            "gpstime": 1755187926,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:12:06"
+        },
+        {
+            "longitude": -71.51359,
+            "latitude": -16.400092,
+            "gpstime": 1755187936,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:12:16"
+        },
+        {
+            "longitude": -71.513602,
+            "latitude": -16.400102,
+            "gpstime": 1755187946,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:12:26"
+        },
+        {
+            "longitude": -71.51361,
+            "latitude": -16.40011,
+            "gpstime": 1755187957,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:12:37"
+        },
+        {
+            "longitude": -71.513629,
+            "latitude": -16.400113,
+            "gpstime": 1755187967,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:12:47"
+        },
+        {
+            "longitude": -71.51364,
+            "latitude": -16.400114,
+            "gpstime": 1755187977,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:12:57"
+        },
+        {
+            "longitude": -71.513636,
+            "latitude": -16.400114,
+            "gpstime": 1755187988,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:13:08"
+        },
+        {
+            "longitude": -71.513638,
+            "latitude": -16.400115,
+            "gpstime": 1755187998,
+            "speed": 0,
+            "course": 189,
+            "datetime": "2025-08-14 11:13:18"
+        },
+        {
+            "longitude": -71.513671,
+            "latitude": -16.400132,
+            "gpstime": 1755188008,
+            "speed": 3,
+            "course": 256,
+            "datetime": "2025-08-14 11:13:28"
+        },
+        {
+            "longitude": -71.513725,
+            "latitude": -16.400152,
+            "gpstime": 1755188019,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:13:39"
+        },
+        {
+            "longitude": -71.513967,
+            "latitude": -16.400179,
+            "gpstime": 1755189938,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:45:38"
+        },
+        {
+            "longitude": -71.513964,
+            "latitude": -16.400179,
+            "gpstime": 1755189949,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:45:49"
+        },
+        {
+            "longitude": -71.513927,
+            "latitude": -16.400173,
+            "gpstime": 1755189969,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:46:09"
+        },
+        {
+            "longitude": -71.513915,
+            "latitude": -16.400172,
+            "gpstime": 1755189981,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:46:21"
+        },
+        {
+            "longitude": -71.513897,
+            "latitude": -16.400169,
+            "gpstime": 1755189991,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:46:31"
+        },
+        {
+            "longitude": -71.513882,
+            "latitude": -16.400165,
+            "gpstime": 1755190001,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:46:41"
+        },
+        {
+            "longitude": -71.513884,
+            "latitude": -16.400183,
+            "gpstime": 1755190012,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:46:52"
+        },
+        {
+            "longitude": -71.513874,
+            "latitude": -16.400178,
+            "gpstime": 1755190022,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:47:02"
+        },
+        {
+            "longitude": -71.513865,
+            "latitude": -16.400175,
+            "gpstime": 1755190032,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:47:12"
+        },
+        {
+            "longitude": -71.513855,
+            "latitude": -16.400177,
+            "gpstime": 1755190043,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:47:23"
+        },
+        {
+            "longitude": -71.513853,
+            "latitude": -16.400158,
+            "gpstime": 1755190053,
+            "speed": 1,
+            "course": 244,
+            "datetime": "2025-08-14 11:47:33"
+        },
+        {
+            "longitude": -71.513835,
+            "latitude": -16.400164,
+            "gpstime": 1755190063,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:47:43"
+        },
+        {
+            "longitude": -71.513807,
+            "latitude": -16.400173,
+            "gpstime": 1755190074,
+            "speed": 2,
+            "course": 244,
+            "datetime": "2025-08-14 11:47:54"
+        },
+        {
+            "longitude": -71.513795,
+            "latitude": -16.400164,
+            "gpstime": 1755190084,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:48:04"
+        },
+        {
+            "longitude": -71.513769,
+            "latitude": -16.400158,
+            "gpstime": 1755190094,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:48:14"
+        },
+        {
+            "longitude": -71.513728,
+            "latitude": -16.400152,
+            "gpstime": 1755190105,
+            "speed": 0,
+            "course": 244,
+            "datetime": "2025-08-14 11:48:25"
+        },
+        {
+            "longitude": -71.513703,
+            "latitude": -16.400189,
+            "gpstime": 1755190115,
+            "speed": 0,
+            "course": 190,
+            "datetime": "2025-08-14 11:48:35"
+        },
+        {
+            "longitude": -71.513719,
+            "latitude": -16.400432,
+            "gpstime": 1755190125,
+            "speed": 16,
+            "course": 187,
+            "datetime": "2025-08-14 11:48:45"
+        },
+        {
+            "longitude": -71.513764,
+            "latitude": -16.400752,
+            "gpstime": 1755190136,
+            "speed": 2,
+            "course": 192,
+            "datetime": "2025-08-14 11:48:56"
+        },
+        {
+            "longitude": -71.513721,
+            "latitude": -16.400774,
+            "gpstime": 1755190146,
+            "speed": 1,
+            "course": 192,
+            "datetime": "2025-08-14 11:49:06"
+        },
+        {
+            "longitude": -71.51372,
+            "latitude": -16.400767,
+            "gpstime": 1755190156,
+            "speed": 0,
+            "course": 192,
+            "datetime": "2025-08-14 11:49:16"
+        },
+        {
+            "longitude": -71.513719,
+            "latitude": -16.400762,
+            "gpstime": 1755190167,
+            "speed": 1,
+            "course": 192,
+            "datetime": "2025-08-14 11:49:27"
+        },
+        {
+            "longitude": -71.513728,
+            "latitude": -16.400762,
+            "gpstime": 1755190177,
+            "speed": 1,
+            "course": 192,
+            "datetime": "2025-08-14 11:49:37"
+        },
+        {
+            "longitude": -71.513759,
+            "latitude": -16.400762,
+            "gpstime": 1755190187,
+            "speed": 2,
+            "course": 192,
+            "datetime": "2025-08-14 11:49:47"
+        },
+        {
+            "longitude": -71.513755,
+            "latitude": -16.40074,
+            "gpstime": 1755190198,
+            "speed": 0,
+            "course": 49,
+            "datetime": "2025-08-14 11:49:58"
+        },
+        {
+            "longitude": -71.513759,
+            "latitude": -16.40072,
+            "gpstime": 1755190208,
+            "speed": 1,
+            "course": 49,
+            "datetime": "2025-08-14 11:50:08"
+        },
+        {
+            "longitude": -71.513744,
+            "latitude": -16.400635,
+            "gpstime": 1755190220,
+            "speed": 5,
+            "course": 359,
+            "datetime": "2025-08-14 11:50:20"
+        },
+        {
+            "longitude": -71.513759,
+            "latitude": -16.400575,
+            "gpstime": 1755190229,
+            "speed": 0,
+            "course": 0,
+            "datetime": "2025-08-14 11:50:29"
+        },
+        {
+            "longitude": -71.513755,
+            "latitude": -16.400579,
+            "gpstime": 1755190240,
+            "speed": 0,
+            "course": 0,
+            "datetime": "2025-08-14 11:50:40"
+        },
+        {
+            "longitude": -71.51375,
+            "latitude": -16.400582,
+            "gpstime": 1755190250,
+            "speed": 0,
+            "course": 0,
+            "datetime": "2025-08-14 11:50:50"
+        },
+        {
+            "longitude": -71.513753,
+            "latitude": -16.400584,
+            "gpstime": 1755190261,
+            "speed": 0,
+            "course": 0,
+            "datetime": "2025-08-14 11:51:01"
+        },
+        {
+            "longitude": -71.513763,
+            "latitude": -16.400609,
+            "gpstime": 1755190271,
+            "speed": 0,
+            "course": 0,
+            "datetime": "2025-08-14 11:51:11"
+        },
+        {
+            "longitude": -71.513661,
+            "latitude": -16.400747,
+            "gpstime": 1755190283,
+            "speed": 14,
+            "course": 139,
+            "datetime": "2025-08-14 11:51:23"
+        },
+        {
+            "longitude": -71.51363,
+            "latitude": -16.400809,
+            "gpstime": 1755190285,
+            "speed": 12,
+            "course": 157,
+            "datetime": "2025-08-14 11:51:25"
+        },
+        {
+            "longitude": -71.513672,
+            "latitude": -16.400903,
+            "gpstime": 1755190287,
+            "speed": 16,
+            "course": 199,
+            "datetime": "2025-08-14 11:51:27"
+        },
+        {
+            "longitude": -71.513844,
+            "latitude": -16.401023,
+            "gpstime": 1755190290,
+            "speed": 21,
+            "course": 231,
+            "datetime": "2025-08-14 11:51:30"
+        },
+        {
+            "longitude": -71.514045,
+            "latitude": -16.401124,
+            "gpstime": 1755190294,
+            "speed": 14,
+            "course": 284,
+            "datetime": "2025-08-14 11:51:34"
+        },
+        {
+            "longitude": -71.514108,
+            "latitude": -16.401108,
+            "gpstime": 1755190295,
+            "speed": 17,
+            "course": 305,
+            "datetime": "2025-08-14 11:51:35"
+        },
+        {
+            "longitude": -71.514802,
+            "latitude": -16.400817,
+            "gpstime": 1755190306,
+            "speed": 24,
+            "course": 304,
+            "datetime": "2025-08-14 11:51:46"
+        },
+        {
+            "longitude": -71.515344,
+            "latitude": -16.400607,
+            "gpstime": 1755190316,
+            "speed": 19,
+            "course": 303,
+            "datetime": "2025-08-14 11:51:56"
+        },
+        {
+            "longitude": -71.51572,
+            "latitude": -16.400375,
+            "gpstime": 1755190326,
+            "speed": 13,
+            "course": 314,
+            "datetime": "2025-08-14 11:52:06"
+        },
+        {
+            "longitude": -71.515839,
+            "latitude": -16.400284,
+            "gpstime": 1755190337,
+            "speed": 11,
+            "course": 303,
+            "datetime": "2025-08-14 11:52:17"
+        },
+        {
+            "longitude": -71.515969,
+            "latitude": -16.400258,
+            "gpstime": 1755190348,
+            "speed": 0,
+            "course": 264,
+            "datetime": "2025-08-14 11:52:28"
+        },
+        {
+            "longitude": -71.515972,
+            "latitude": -16.400257,
+            "gpstime": 1755190358,
+            "speed": 0,
+            "course": 264,
+            "datetime": "2025-08-14 11:52:38"
+        },
+        {
+            "longitude": -71.516043,
+            "latitude": -16.400328,
+            "gpstime": 1755190369,
+            "speed": 10,
+            "course": 214,
+            "datetime": "2025-08-14 11:52:49"
+        },
+        {
+            "longitude": -71.516354,
+            "latitude": -16.400726,
+            "gpstime": 1755190379,
+            "speed": 22,
+            "course": 218,
+            "datetime": "2025-08-14 11:52:59"
+        },
+        {
+            "longitude": -71.516689,
+            "latitude": -16.40116,
+            "gpstime": 1755190389,
+            "speed": 23,
+            "course": 214,
+            "datetime": "2025-08-14 11:53:09"
+        },
+        {
+            "longitude": -71.517191,
+            "latitude": -16.401783,
+            "gpstime": 1755190400,
+            "speed": 34,
+            "course": 217,
+            "datetime": "2025-08-14 11:53:20"
+        },
+        {
+            "longitude": -71.51778,
+            "latitude": -16.402468,
+            "gpstime": 1755190410,
+            "speed": 28,
+            "course": 216,
+            "datetime": "2025-08-14 11:53:30"
+        },
+        {
+            "longitude": -71.518135,
+            "latitude": -16.40295,
+            "gpstime": 1755190420,
+            "speed": 26,
+            "course": 216,
+            "datetime": "2025-08-14 11:53:40"
+        },
+        {
+            "longitude": -71.518542,
+            "latitude": -16.403429,
+            "gpstime": 1755190429,
+            "speed": 27,
+            "course": 231,
+            "datetime": "2025-08-14 11:53:49"
+        },
+        {
+            "longitude": -71.519346,
+            "latitude": -16.403938,
+            "gpstime": 1755190439,
+            "speed": 49,
+            "course": 235,
+            "datetime": "2025-08-14 11:53:59"
+        },
+        {
+            "longitude": -71.52006,
+            "latitude": -16.404502,
+            "gpstime": 1755190449,
+            "speed": 19,
+            "course": 228,
+            "datetime": "2025-08-14 11:54:09"
+        },
+        {
+            "longitude": -71.520539,
+            "latitude": -16.40485,
+            "gpstime": 1755190460,
+            "speed": 25,
+            "course": 239,
+            "datetime": "2025-08-14 11:54:20"
+        },
+        {
+            "longitude": -71.5211,
+            "latitude": -16.405156,
+            "gpstime": 1755190470,
+            "speed": 22,
+            "course": 241,
+            "datetime": "2025-08-14 11:54:30"
+        },
+        {
+            "longitude": -71.521608,
+            "latitude": -16.405417,
+            "gpstime": 1755190480,
+            "speed": 24,
+            "course": 239,
+            "datetime": "2025-08-14 11:54:40"
+        },
+        {
+            "longitude": -71.522285,
+            "latitude": -16.405757,
+            "gpstime": 1755190491,
+            "speed": 29,
+            "course": 233,
+            "datetime": "2025-08-14 11:54:51"
+        },
+        {
+            "longitude": -71.52291,
+            "latitude": -16.406245,
+            "gpstime": 1755190501,
+            "speed": 29,
+            "course": 231,
+            "datetime": "2025-08-14 11:55:01"
+        },
+        {
+            "longitude": -71.523534,
+            "latitude": -16.406643,
+            "gpstime": 1755190509,
+            "speed": 39,
+            "course": 249,
+            "datetime": "2025-08-14 11:55:09"
+        },
+        {
+            "longitude": -71.524519,
+            "latitude": -16.406976,
+            "gpstime": 1755190520,
+            "speed": 22,
+            "course": 257,
+            "datetime": "2025-08-14 11:55:20"
+        },
+        {
+            "longitude": -71.524642,
+            "latitude": -16.406968,
+            "gpstime": 1755190522,
+            "speed": 26,
+            "course": 291,
+            "datetime": "2025-08-14 11:55:22"
+        },
+        {
+            "longitude": -71.524759,
+            "latitude": -16.406889,
+            "gpstime": 1755190524,
+            "speed": 30,
+            "course": 312,
+            "datetime": "2025-08-14 11:55:24"
+        },
+        {
+            "longitude": -71.525375,
+            "latitude": -16.406357,
+            "gpstime": 1755190534,
+            "speed": 27,
+            "course": 319,
+            "datetime": "2025-08-14 11:55:34"
+        },
+        {
+            "longitude": -71.525736,
+            "latitude": -16.405905,
+            "gpstime": 1755190544,
+            "speed": 19,
+            "course": 320,
+            "datetime": "2025-08-14 11:55:44"
+        },
+        {
+            "longitude": -71.525893,
+            "latitude": -16.405727,
+            "gpstime": 1755190556,
+            "speed": 0,
+            "course": 317,
+            "datetime": "2025-08-14 11:55:56"
+        },
+        {
+            "longitude": -71.52596,
+            "latitude": -16.405647,
+            "gpstime": 1755190566,
+            "speed": 15,
+            "course": 315,
+            "datetime": "2025-08-14 11:56:06"
+        },
+        {
+            "longitude": -71.526326,
+            "latitude": -16.405255,
+            "gpstime": 1755190576,
+            "speed": 23,
+            "course": 320,
+            "datetime": "2025-08-14 11:56:16"
+        },
+        {
+            "longitude": -71.526564,
+            "latitude": -16.405047,
+            "gpstime": 1755190582,
+            "speed": 13,
+            "course": 296,
+            "datetime": "2025-08-14 11:56:22"
+        },
+        {
+            "longitude": -71.526825,
+            "latitude": -16.404845,
+            "gpstime": 1755190589,
+            "speed": 23,
+            "course": 312,
+            "datetime": "2025-08-14 11:56:29"
+        },
+        {
+            "longitude": -71.527285,
+            "latitude": -16.404453,
+            "gpstime": 1755190601,
+            "speed": 7,
+            "course": 342,
+            "datetime": "2025-08-14 11:56:41"
+        },
+        {
+            "longitude": -71.527302,
+            "latitude": -16.404452,
+            "gpstime": 1755190611,
+            "speed": 0,
+            "course": 299,
+            "datetime": "2025-08-14 11:56:51"
+        },
+        {
+            "longitude": -71.52729,
+            "latitude": -16.404448,
+            "gpstime": 1755190622,
+            "speed": 0,
+            "course": 67,
+            "datetime": "2025-08-14 11:57:02"
+        },
+        {
+            "longitude": -71.52729,
+            "latitude": -16.404445,
+            "gpstime": 1755190632,
+            "speed": 0,
+            "course": 67,
+            "datetime": "2025-08-14 11:57:12"
+        },
+        {
+            "longitude": -71.527288,
+            "latitude": -16.404441,
+            "gpstime": 1755190642,
+            "speed": 0,
+            "course": 67,
+            "datetime": "2025-08-14 11:57:22"
+        },
+        {
+            "longitude": -71.527285,
+            "latitude": -16.404435,
+            "gpstime": 1755190653,
+            "speed": 0,
+            "course": 67,
+            "datetime": "2025-08-14 11:57:33"
+        },
+        {
+            "longitude": -71.527287,
+            "latitude": -16.40443,
+            "gpstime": 1755190663,
+            "speed": 0,
+            "course": 67,
+            "datetime": "2025-08-14 11:57:43"
+        },
+        {
+            "longitude": -71.52729,
+            "latitude": -16.40443,
+            "gpstime": 1755190673,
+            "speed": 0,
+            "course": 67,
+            "datetime": "2025-08-14 11:57:53"
+        },
+        {
+            "longitude": -71.527307,
+            "latitude": -16.404403,
+            "gpstime": 1755190684,
+            "speed": 7,
+            "course": 321,
+            "datetime": "2025-08-14 11:58:04"
+        },
+        {
+            "longitude": -71.527297,
+            "latitude": -16.4043,
+            "gpstime": 1755190689,
+            "speed": 14,
+            "course": 40,
+            "datetime": "2025-08-14 11:58:09"
+        },
+        {
+            "longitude": -71.52721,
+            "latitude": -16.404227,
+            "gpstime": 1755190692,
+            "speed": 14,
+            "course": 63,
+            "datetime": "2025-08-14 11:58:12"
+        },
+        {
+            "longitude": -71.527044,
+            "latitude": -16.404118,
+            "gpstime": 1755190697,
+            "speed": 17,
+            "course": 44,
+            "datetime": "2025-08-14 11:58:17"
+        },
+        {
+            "longitude": -71.526524,
+            "latitude": -16.403669,
+            "gpstime": 1755190707,
+            "speed": 33,
+            "course": 49,
+            "datetime": "2025-08-14 11:58:27"
+        },
+        {
+            "longitude": -71.525817,
+            "latitude": -16.403082,
+            "gpstime": 1755190718,
+            "speed": 29,
+            "course": 51,
+            "datetime": "2025-08-14 11:58:38"
+        },
+        {
+            "longitude": -71.525275,
+            "latitude": -16.402622,
+            "gpstime": 1755190728,
+            "speed": 23,
+            "course": 46,
+            "datetime": "2025-08-14 11:58:48"
+        },
+        {
+            "longitude": -71.525167,
+            "latitude": -16.402529,
+            "gpstime": 1755190738,
+            "speed": 2,
+            "course": 237,
+            "datetime": "2025-08-14 11:58:58"
+        },
+        {
+            "longitude": -71.525165,
+            "latitude": -16.402522,
+            "gpstime": 1755190749,
+            "speed": 0,
+            "course": 237,
+            "datetime": "2025-08-14 11:59:09"
+        },
+        {
+            "longitude": -71.525159,
+            "latitude": -16.402514,
+            "gpstime": 1755190759,
+            "speed": 0,
+            "course": 237,
+            "datetime": "2025-08-14 11:59:19"
+        },
+        {
+            "longitude": -71.524975,
+            "latitude": -16.402359,
+            "gpstime": 1755190771,
+            "speed": 13,
+            "course": 48,
+            "datetime": "2025-08-14 11:59:31"
+        },
+        {
+            "longitude": -71.524574,
+            "latitude": -16.401969,
+            "gpstime": 1755190781,
+            "speed": 30,
+            "course": 28,
+            "datetime": "2025-08-14 11:59:41"
+        },
+        {
+            "longitude": -71.524539,
+            "latitude": -16.401827,
+            "gpstime": 1755190783,
+            "speed": 26,
+            "course": 350,
+            "datetime": "2025-08-14 11:59:43"
+        },
+        {
+            "longitude": -71.524643,
+            "latitude": -16.401705,
+            "gpstime": 1755190786,
+            "speed": 20,
+            "course": 314,
+            "datetime": "2025-08-14 11:59:46"
+        },
+        {
+            "longitude": -71.525015,
+            "latitude": -16.401322,
+            "gpstime": 1755190797,
+            "speed": 16,
+            "course": 323,
+            "datetime": "2025-08-14 11:59:57"
+        },
+        {
+            "longitude": -71.525273,
+            "latitude": -16.401076,
+            "gpstime": 1755190807,
+            "speed": 12,
+            "course": 296,
+            "datetime": "2025-08-14 12:00:07"
+        },
+        {
+            "longitude": -71.525375,
+            "latitude": -16.401004,
+            "gpstime": 1755190811,
+            "speed": 11,
+            "course": 316,
+            "datetime": "2025-08-14 12:00:11"
+        },
+        {
+            "longitude": -71.525586,
+            "latitude": -16.400762,
+            "gpstime": 1755190821,
+            "speed": 12,
+            "course": 323,
+            "datetime": "2025-08-14 12:00:21"
+        },
+        {
+            "longitude": -71.525798,
+            "latitude": -16.400493,
+            "gpstime": 1755190831,
+            "speed": 14,
+            "course": 326,
+            "datetime": "2025-08-14 12:00:31"
+        },
+        {
+            "longitude": -71.52601,
+            "latitude": -16.400232,
+            "gpstime": 1755190842,
+            "speed": 6,
+            "course": 332,
+            "datetime": "2025-08-14 12:00:42"
+        },
+        {
+            "longitude": -71.526063,
+            "latitude": -16.400162,
+            "gpstime": 1755190852,
+            "speed": 0,
+            "course": 326,
+            "datetime": "2025-08-14 12:00:52"
+        },
+        {
+            "longitude": -71.526059,
+            "latitude": -16.400162,
+            "gpstime": 1755190862,
+            "speed": 0,
+            "course": 326,
+            "datetime": "2025-08-14 12:01:02"
+        },
+        {
+            "longitude": -71.526058,
+            "latitude": -16.400153,
+            "gpstime": 1755190873,
+            "speed": 0,
+            "course": 326,
+            "datetime": "2025-08-14 12:01:13"
+        },
+        {
+            "longitude": -71.52605,
+            "latitude": -16.400148,
+            "gpstime": 1755190883,
+            "speed": 0,
+            "course": 326,
+            "datetime": "2025-08-14 12:01:23"
+        },
+        {
+            "longitude": -71.526045,
+            "latitude": -16.400144,
+            "gpstime": 1755190893,
+            "speed": 0,
+            "course": 326,
+            "datetime": "2025-08-14 12:01:33"
+        },
+        {
+            "longitude": -71.526092,
+            "latitude": -16.400074,
+            "gpstime": 1755190905,
+            "speed": 9,
+            "course": 325,
+            "datetime": "2025-08-14 12:01:45"
+        },
+        {
+            "longitude": -71.526163,
+            "latitude": -16.39995,
+            "gpstime": 1755190910,
+            "speed": 11,
+            "course": 349,
+            "datetime": "2025-08-14 12:01:50"
+        },
+        {
+            "longitude": -71.526154,
+            "latitude": -16.39989,
+            "gpstime": 1755190912,
+            "speed": 13,
+            "course": 34,
+            "datetime": "2025-08-14 12:01:52"
+        },
+        {
+            "longitude": -71.52599,
+            "latitude": -16.399742,
+            "gpstime": 1755190917,
+            "speed": 17,
+            "course": 51,
+            "datetime": "2025-08-14 12:01:57"
+        },
+        {
+            "longitude": -71.525769,
+            "latitude": -16.399542,
+            "gpstime": 1755190923,
+            "speed": 16,
+            "course": 17,
+            "datetime": "2025-08-14 12:02:03"
+        },
+        {
+            "longitude": -71.525843,
+            "latitude": -16.399382,
+            "gpstime": 1755190927,
+            "speed": 21,
+            "course": 318,
+            "datetime": "2025-08-14 12:02:07"
+        },
+        {
+            "longitude": -71.526334,
+            "latitude": -16.398841,
+            "gpstime": 1755190938,
+            "speed": 24,
+            "course": 321,
+            "datetime": "2025-08-14 12:02:18"
+        },
+        {
+            "longitude": -71.52662,
+            "latitude": -16.398502,
+            "gpstime": 1755190948,
+            "speed": 1,
+            "course": 318,
+            "datetime": "2025-08-14 12:02:28"
+        },
+        {
+            "longitude": -71.526617,
+            "latitude": -16.398507,
+            "gpstime": 1755190958,
+            "speed": 0,
+            "course": 318,
+            "datetime": "2025-08-14 12:02:38"
+        },
+        {
+            "longitude": -71.526615,
+            "latitude": -16.39851,
+            "gpstime": 1755190969,
+            "speed": 0,
+            "course": 318,
+            "datetime": "2025-08-14 12:02:49"
+        },
+        {
+            "longitude": -71.526614,
+            "latitude": -16.398512,
+            "gpstime": 1755190979,
+            "speed": 0,
+            "course": 318,
+            "datetime": "2025-08-14 12:02:59"
+        },
+        {
+            "longitude": -71.526765,
+            "latitude": -16.398367,
+            "gpstime": 1755190989,
+            "speed": 11,
+            "course": 285,
+            "datetime": "2025-08-14 12:03:09"
+        },
+        {
+            "longitude": -71.526834,
+            "latitude": -16.398363,
+            "gpstime": 1755190991,
+            "speed": 14,
+            "course": 248,
+            "datetime": "2025-08-14 12:03:11"
+        },
+        {
+            "longitude": -71.5269,
+            "latitude": -16.39842,
+            "gpstime": 1755190993,
+            "speed": 19,
+            "course": 224,
+            "datetime": "2025-08-14 12:03:13"
+        },
+        {
+            "longitude": -71.527498,
+            "latitude": -16.398831,
+            "gpstime": 1755191005,
+            "speed": 23,
+            "course": 235,
+            "datetime": "2025-08-14 12:03:25"
+        },
+        {
+            "longitude": -71.527861,
+            "latitude": -16.399102,
+            "gpstime": 1755191015,
+            "speed": 8,
+            "course": 226,
+            "datetime": "2025-08-14 12:03:35"
+        },
+        {
+            "longitude": -71.528028,
+            "latitude": -16.399266,
+            "gpstime": 1755191025,
+            "speed": 11,
+            "course": 224,
+            "datetime": "2025-08-14 12:03:45"
+        },
+        {
+            "longitude": -71.528184,
+            "latitude": -16.399417,
+            "gpstime": 1755191035,
+            "speed": 4,
+            "course": 240,
+            "datetime": "2025-08-14 12:03:55"
+        },
+        {
+            "longitude": -71.528258,
+            "latitude": -16.399457,
+            "gpstime": 1755191046,
+            "speed": 4,
+            "course": 230,
+            "datetime": "2025-08-14 12:04:06"
+        },
+        {
+            "longitude": -71.528322,
+            "latitude": -16.399512,
+            "gpstime": 1755191056,
+            "speed": 0,
+            "course": 230,
+            "datetime": "2025-08-14 12:04:16"
+        },
+        {
+            "longitude": -71.528334,
+            "latitude": -16.399515,
+            "gpstime": 1755191067,
+            "speed": 0,
+            "course": 230,
+            "datetime": "2025-08-14 12:04:27"
+        },
+        {
+            "longitude": -71.528558,
+            "latitude": -16.399688,
+            "gpstime": 1755191077,
+            "speed": 13,
+            "course": 221,
+            "datetime": "2025-08-14 12:04:37"
+        },
+        {
+            "longitude": -71.529017,
+            "latitude": -16.40003,
+            "gpstime": 1755191087,
+            "speed": 23,
+            "course": 230,
+            "datetime": "2025-08-14 12:04:47"
+        },
+        {
+            "longitude": -71.529352,
+            "latitude": -16.400292,
+            "gpstime": 1755191098,
+            "speed": 0,
+            "course": 223,
+            "datetime": "2025-08-14 12:04:58"
+        },
+        {
+            "longitude": -71.529373,
+            "latitude": -16.400292,
+            "gpstime": 1755191108,
+            "speed": 0,
+            "course": 223,
+            "datetime": "2025-08-14 12:05:08"
+        },
+        {
+            "longitude": -71.529386,
+            "latitude": -16.400291,
+            "gpstime": 1755191118,
+            "speed": 0,
+            "course": 223,
+            "datetime": "2025-08-14 12:05:18"
+        },
+        {
+            "longitude": -71.529592,
+            "latitude": -16.400448,
+            "gpstime": 1755191129,
+            "speed": 6,
+            "course": 226,
+            "datetime": "2025-08-14 12:05:29"
+        },
+        {
+            "longitude": -71.529939,
+            "latitude": -16.400724,
+            "gpstime": 1755191139,
+            "speed": 24,
+            "course": 232,
+            "datetime": "2025-08-14 12:05:39"
+        },
+        {
+            "longitude": -71.530457,
+            "latitude": -16.401147,
+            "gpstime": 1755191149,
+            "speed": 21,
+            "course": 228,
+            "datetime": "2025-08-14 12:05:49"
+        },
+        {
+            "longitude": -71.53057,
+            "latitude": -16.401261,
+            "gpstime": 1755191153,
+            "speed": 11,
+            "course": 196,
+            "datetime": "2025-08-14 12:05:53"
+        },
+        {
+            "longitude": -71.530566,
+            "latitude": -16.401349,
+            "gpstime": 1755191156,
+            "speed": 12,
+            "course": 156,
+            "datetime": "2025-08-14 12:05:56"
+        },
+        {
+            "longitude": -71.53043,
+            "latitude": -16.401478,
+            "gpstime": 1755191166,
+            "speed": 7,
+            "course": 126,
+            "datetime": "2025-08-14 12:06:06"
+        },
+        {
+            "longitude": -71.530265,
+            "latitude": -16.401573,
+            "gpstime": 1755191177,
+            "speed": 4,
+            "course": 103,
+            "datetime": "2025-08-14 12:06:17"
+        },
+        {
+            "longitude": -71.53015,
+            "latitude": -16.401679,
+            "gpstime": 1755191183,
+            "speed": 15,
+            "course": 123,
+            "datetime": "2025-08-14 12:06:23"
+        },
+        {
+            "longitude": -71.529822,
+            "latitude": -16.401986,
+            "gpstime": 1755191194,
+            "speed": 18,
+            "course": 138,
+            "datetime": "2025-08-14 12:06:34"
+        },
+        {
+            "longitude": -71.529617,
+            "latitude": -16.402206,
+            "gpstime": 1755191203,
+            "speed": 1,
+            "course": 122,
+            "datetime": "2025-08-14 12:06:43"
+        },
+        {
+            "longitude": -71.529479,
+            "latitude": -16.402348,
+            "gpstime": 1755191214,
+            "speed": 10,
+            "course": 120,
+            "datetime": "2025-08-14 12:06:54"
+        },
+        {
+            "longitude": -71.529455,
+            "latitude": -16.40238,
+            "gpstime": 1755191225,
+            "speed": 0,
+            "course": 126,
+            "datetime": "2025-08-14 12:07:05"
+        },
+        {
+            "longitude": -71.529445,
+            "latitude": -16.402374,
+            "gpstime": 1755191235,
+            "speed": 0,
+            "course": 126,
+            "datetime": "2025-08-14 12:07:15"
+        },
+        {
+            "longitude": -71.529434,
+            "latitude": -16.402366,
+            "gpstime": 1755191245,
+            "speed": 0,
+            "course": 126,
+            "datetime": "2025-08-14 12:07:25"
+        },
+        {
+            "longitude": -71.529432,
+            "latitude": -16.402362,
+            "gpstime": 1755191256,
+            "speed": 0,
+            "course": 126,
+            "datetime": "2025-08-14 12:07:36"
+        },
+        {
+            "longitude": -71.529432,
+            "latitude": -16.402363,
+            "gpstime": 1755191266,
+            "speed": 0,
+            "course": 126,
+            "datetime": "2025-08-14 12:07:46"
+        },
+        {
+            "longitude": -71.529355,
+            "latitude": -16.402428,
+            "gpstime": 1755191276,
+            "speed": 7,
+            "course": 100,
+            "datetime": "2025-08-14 12:07:56"
+        },
+        {
+            "longitude": -71.529307,
+            "latitude": -16.402418,
+            "gpstime": 1755191278,
+            "speed": 13,
+            "course": 64,
+            "datetime": "2025-08-14 12:07:58"
+        },
+        {
+            "longitude": -71.52925,
+            "latitude": -16.402367,
+            "gpstime": 1755191280,
+            "speed": 15,
+            "course": 39,
+            "datetime": "2025-08-14 12:08:00"
+        },
+        {
+            "longitude": -71.528883,
+            "latitude": -16.402036,
+            "gpstime": 1755191290,
+            "speed": 18,
+            "course": 47,
+            "datetime": "2025-08-14 12:08:10"
+        },
+        {
+            "longitude": -71.528739,
+            "latitude": -16.401919,
+            "gpstime": 1755191302,
+            "speed": 0,
+            "course": 48,
+            "datetime": "2025-08-14 12:08:22"
+        },
+        {
+            "longitude": -71.528743,
+            "latitude": -16.401928,
+            "gpstime": 1755191311,
+            "speed": 0,
+            "course": 48,
+            "datetime": "2025-08-14 12:08:31"
+        },
+        {
+            "longitude": -71.528544,
+            "latitude": -16.40178,
+            "gpstime": 1755191321,
+            "speed": 14,
+            "course": 51,
+            "datetime": "2025-08-14 12:08:41"
+        },
+        {
+            "longitude": -71.528348,
+            "latitude": -16.401532,
+            "gpstime": 1755191330,
+            "speed": 13,
+            "course": 344,
+            "datetime": "2025-08-14 12:08:50"
+        },
+        {
+            "longitude": -71.528426,
+            "latitude": -16.401474,
+            "gpstime": 1755191333,
+            "speed": 14,
+            "course": 289,
+            "datetime": "2025-08-14 12:08:53"
+        },
+        {
+            "longitude": -71.528561,
+            "latitude": -16.401391,
+            "gpstime": 1755191337,
+            "speed": 17,
+            "course": 318,
+            "datetime": "2025-08-14 12:08:57"
+        },
+        {
+            "longitude": -71.52891,
+            "latitude": -16.401083,
+            "gpstime": 1755191347,
+            "speed": 18,
+            "course": 311,
+            "datetime": "2025-08-14 12:09:07"
+        },
+        {
+            "longitude": -71.529018,
+            "latitude": -16.400978,
+            "gpstime": 1755191357,
+            "speed": 0,
+            "course": 305,
+            "datetime": "2025-08-14 12:09:17"
+        },
+        {
+            "longitude": -71.529032,
+            "latitude": -16.400963,
+            "gpstime": 1755191368,
+            "speed": 7,
+            "course": 308,
+            "datetime": "2025-08-14 12:09:28"
+        },
+        {
+            "longitude": -71.529072,
+            "latitude": -16.400917,
+            "gpstime": 1755191370,
+            "speed": 12,
+            "course": 326,
+            "datetime": "2025-08-14 12:09:30"
+        },
+        {
+            "longitude": -71.529147,
+            "latitude": -16.400835,
+            "gpstime": 1755191374,
+            "speed": 12,
+            "course": 311,
+            "datetime": "2025-08-14 12:09:34"
+        },
+        {
+            "longitude": -71.529346,
+            "latitude": -16.400675,
+            "gpstime": 1755191385,
+            "speed": 0,
+            "course": 327,
+            "datetime": "2025-08-14 12:09:45"
+        },
+        {
+            "longitude": -71.529349,
+            "latitude": -16.400678,
+            "gpstime": 1755191395,
+            "speed": 0,
+            "course": 327,
+            "datetime": "2025-08-14 12:09:55"
+        },
+        {
+            "longitude": -71.529348,
+            "latitude": -16.400678,
+            "gpstime": 1755191405,
+            "speed": 0,
+            "course": 327,
+            "datetime": "2025-08-14 12:10:05"
+        },
+        {
+            "longitude": -71.529418,
+            "latitude": -16.400622,
+            "gpstime": 1755191414,
+            "speed": 12,
+            "course": 306,
+            "datetime": "2025-08-14 12:10:14"
+        },
+        {
+            "longitude": -71.529659,
+            "latitude": -16.400461,
+            "gpstime": 1755191422,
+            "speed": 16,
+            "course": 259,
+            "datetime": "2025-08-14 12:10:22"
+        },
+        {
+            "longitude": -71.529744,
+            "latitude": -16.400512,
+            "gpstime": 1755191424,
+            "speed": 20,
+            "course": 232,
+            "datetime": "2025-08-14 12:10:24"
+        },
+        {
+            "longitude": -71.530256,
+            "latitude": -16.400898,
+            "gpstime": 1755191435,
+            "speed": 19,
+            "course": 228,
+            "datetime": "2025-08-14 12:10:35"
+        },
+        {
+            "longitude": -71.530364,
+            "latitude": -16.400966,
+            "gpstime": 1755191438,
+            "speed": 13,
+            "course": 251,
+            "datetime": "2025-08-14 12:10:38"
+        },
+        {
+            "longitude": -71.530631,
+            "latitude": -16.401129,
+            "gpstime": 1755191449,
+            "speed": 10,
+            "course": 229,
+            "datetime": "2025-08-14 12:10:49"
+        },
+        {
+            "longitude": -71.530871,
+            "latitude": -16.40135,
+            "gpstime": 1755191459,
+            "speed": 12,
+            "course": 220,
+            "datetime": "2025-08-14 12:10:59"
+        },
+        {
+            "longitude": -71.531062,
+            "latitude": -16.40155,
+            "gpstime": 1755191469,
+            "speed": 9,
+            "course": 228,
+            "datetime": "2025-08-14 12:11:09"
+        },
+        {
+            "longitude": -71.53128,
+            "latitude": -16.401764,
+            "gpstime": 1755191481,
+            "speed": 11,
+            "course": 218,
+            "datetime": "2025-08-14 12:11:21"
+        },
+        {
+            "longitude": -71.531436,
+            "latitude": -16.401935,
+            "gpstime": 1755191488,
+            "speed": 11,
+            "course": 237,
+            "datetime": "2025-08-14 12:11:28"
+        },
+        {
+            "longitude": -71.531497,
+            "latitude": -16.401992,
+            "gpstime": 1755191491,
+            "speed": 11,
+            "course": 212,
+            "datetime": "2025-08-14 12:11:31"
+        },
+        {
+            "longitude": -71.53156,
+            "latitude": -16.402077,
+            "gpstime": 1755191501,
+            "speed": 2,
+            "course": 224,
+            "datetime": "2025-08-14 12:11:41"
+        },
+        {
+            "longitude": -71.531705,
+            "latitude": -16.402298,
+            "gpstime": 1755191512,
+            "speed": 4,
+            "course": 216,
+            "datetime": "2025-08-14 12:11:52"
+        },
+        {
+            "longitude": -71.53173,
+            "latitude": -16.402338,
+            "gpstime": 1755191522,
+            "speed": 1,
+            "course": 216,
+            "datetime": "2025-08-14 12:12:02"
+        },
+        {
+            "longitude": -71.531736,
+            "latitude": -16.402351,
+            "gpstime": 1755191532,
+            "speed": 0,
+            "course": 216,
+            "datetime": "2025-08-14 12:12:12"
+        },
+        {
+            "longitude": -71.531778,
+            "latitude": -16.402417,
+            "gpstime": 1755194774,
+            "speed": 0,
+            "course": 216,
+            "datetime": "2025-08-14 13:06:14"
+        },
+        {
+            "longitude": -71.531778,
+            "latitude": -16.402418,
+            "gpstime": 1755194794,
+            "speed": 0,
+            "course": 216,
+            "datetime": "2025-08-14 13:06:34"
+        },
+        {
+            "longitude": -71.531777,
+            "latitude": -16.402419,
+            "gpstime": 1755194805,
+            "speed": 0,
+            "course": 216,
+            "datetime": "2025-08-14 13:06:45"
+        },
+        {
+            "longitude": -71.531778,
+            "latitude": -16.402421,
+            "gpstime": 1755194815,
+            "speed": 1,
+            "course": 216,
+            "datetime": "2025-08-14 13:06:55"
+        },
+        {
+            "longitude": -71.531777,
+            "latitude": -16.402421,
+            "gpstime": 1755194825,
+            "speed": 0,
+            "course": 216,
+            "datetime": "2025-08-14 13:07:05"
+        },
+        {
+            "longitude": -71.531777,
+            "latitude": -16.402422,
+            "gpstime": 1755194836,
+            "speed": 0,
+            "course": 216,
+            "datetime": "2025-08-14 13:07:16"
+        },
+        {
+            "longitude": -71.53179,
+            "latitude": -16.402466,
+            "gpstime": 1755194846,
+            "speed": 4,
+            "course": 224,
+            "datetime": "2025-08-14 13:07:26"
+        },
+        {
+            "longitude": -71.531826,
+            "latitude": -16.402526,
+            "gpstime": 1755194856,
+            "speed": 0,
+            "course": 224,
+            "datetime": "2025-08-14 13:07:36"
+        },
+        {
+            "longitude": -71.531902,
+            "latitude": -16.40266,
+            "gpstime": 1755194867,
+            "speed": 13,
+            "course": 213,
+            "datetime": "2025-08-14 13:07:47"
+        },
+        {
+            "longitude": -71.532041,
+            "latitude": -16.402938,
+            "gpstime": 1755194877,
+            "speed": 9,
+            "course": 207,
+            "datetime": "2025-08-14 13:07:57"
+        },
+        {
+            "longitude": -71.532152,
+            "latitude": -16.403165,
+            "gpstime": 1755194887,
+            "speed": 8,
+            "course": 200,
+            "datetime": "2025-08-14 13:08:07"
+        },
+        {
+            "longitude": -71.532224,
+            "latitude": -16.403325,
+            "gpstime": 1755194898,
+            "speed": 3,
+            "course": 173,
+            "datetime": "2025-08-14 13:08:18"
+        },
+        {
+            "longitude": -71.532224,
+            "latitude": -16.403358,
+            "gpstime": 1755194908,
+            "speed": 0,
+            "course": 173,
+            "datetime": "2025-08-14 13:08:28"
+        },
+        {
+            "longitude": -71.532257,
+            "latitude": -16.403455,
+            "gpstime": 1755194918,
+            "speed": 9,
+            "course": 203,
+            "datetime": "2025-08-14 13:08:38"
+        },
+        {
+            "longitude": -71.532403,
+            "latitude": -16.403663,
+            "gpstime": 1755194927,
+            "speed": 12,
+            "course": 219,
+            "datetime": "2025-08-14 13:08:47"
+        },
+        {
+            "longitude": -71.532593,
+            "latitude": -16.403977,
+            "gpstime": 1755194937,
+            "speed": 15,
+            "course": 206,
+            "datetime": "2025-08-14 13:08:57"
+        },
+        {
+            "longitude": -71.532689,
+            "latitude": -16.404196,
+            "gpstime": 1755194944,
+            "speed": 11,
+            "course": 190,
+            "datetime": "2025-08-14 13:09:04"
+        },
+        {
+            "longitude": -71.532715,
+            "latitude": -16.404383,
+            "gpstime": 1755194952,
+            "speed": 15,
+            "course": 142,
+            "datetime": "2025-08-14 13:09:12"
+        },
+        {
+            "longitude": -71.532593,
+            "latitude": -16.404469,
+            "gpstime": 1755194956,
+            "speed": 14,
+            "course": 114,
+            "datetime": "2025-08-14 13:09:16"
+        },
+        {
+            "longitude": -71.532563,
+            "latitude": -16.404475,
+            "gpstime": 1755194967,
+            "speed": 1,
+            "course": 101,
+            "datetime": "2025-08-14 13:09:27"
+        },
+        {
+            "longitude": -71.532594,
+            "latitude": -16.404467,
+            "gpstime": 1755194977,
+            "speed": 0,
+            "course": 101,
+            "datetime": "2025-08-14 13:09:37"
+        },
+        {
+            "longitude": -71.532614,
+            "latitude": -16.404471,
+            "gpstime": 1755194987,
+            "speed": 0,
+            "course": 101,
+            "datetime": "2025-08-14 13:09:47"
+        },
+        {
+            "longitude": -71.532632,
+            "latitude": -16.404483,
+            "gpstime": 1755194998,
+            "speed": 0,
+            "course": 101,
+            "datetime": "2025-08-14 13:09:58"
+        },
+        {
+            "longitude": -71.532568,
+            "latitude": -16.404539,
+            "gpstime": 1755195008,
+            "speed": 12,
+            "course": 130,
+            "datetime": "2025-08-14 13:10:08"
+        },
+        {
+            "longitude": -71.53243,
+            "latitude": -16.404661,
+            "gpstime": 1755195018,
+            "speed": 15,
+            "course": 132,
+            "datetime": "2025-08-14 13:10:18"
+        },
+        {
+            "longitude": -71.53222,
+            "latitude": -16.404755,
+            "gpstime": 1755195027,
+            "speed": 15,
+            "course": 48,
+            "datetime": "2025-08-14 13:10:27"
+        },
+        {
+            "longitude": -71.531843,
+            "latitude": -16.404445,
+            "gpstime": 1755195037,
+            "speed": 22,
+            "course": 50,
+            "datetime": "2025-08-14 13:10:37"
+        },
+        {
+            "longitude": -71.531374,
+            "latitude": -16.404072,
+            "gpstime": 1755195047,
+            "speed": 25,
+            "course": 52,
+            "datetime": "2025-08-14 13:10:47"
+        },
+        {
+            "longitude": -71.530825,
+            "latitude": -16.403654,
+            "gpstime": 1755195058,
+            "speed": 24,
+            "course": 50,
+            "datetime": "2025-08-14 13:10:58"
+        },
+        {
+            "longitude": -71.530364,
+            "latitude": -16.403279,
+            "gpstime": 1755195068,
+            "speed": 22,
+            "course": 51,
+            "datetime": "2025-08-14 13:11:08"
+        },
+        {
+            "longitude": -71.529983,
+            "latitude": -16.402969,
+            "gpstime": 1755195078,
+            "speed": 13,
+            "course": 49,
+            "datetime": "2025-08-14 13:11:18"
+        },
+        {
+            "longitude": -71.529644,
+            "latitude": -16.402709,
+            "gpstime": 1755195089,
+            "speed": 11,
+            "course": 56,
+            "datetime": "2025-08-14 13:11:29"
+        },
+        {
+            "longitude": -71.529588,
+            "latitude": -16.402687,
+            "gpstime": 1755195099,
+            "speed": 0,
+            "course": 38,
+            "datetime": "2025-08-14 13:11:39"
+        },
+        {
+            "longitude": -71.529587,
+            "latitude": -16.402687,
+            "gpstime": 1755195109,
+            "speed": 0,
+            "course": 38,
+            "datetime": "2025-08-14 13:11:49"
+        },
+        {
+            "longitude": -71.529584,
+            "latitude": -16.402684,
+            "gpstime": 1755195121,
+            "speed": 0,
+            "course": 38,
+            "datetime": "2025-08-14 13:12:01"
+        },
+        {
+            "longitude": -71.5295,
+            "latitude": -16.402604,
+            "gpstime": 1755195131,
+            "speed": 15,
+            "course": 53,
+            "datetime": "2025-08-14 13:12:11"
+        },
+        {
+            "longitude": -71.529073,
+            "latitude": -16.40227,
+            "gpstime": 1755195141,
+            "speed": 26,
+            "course": 48,
+            "datetime": "2025-08-14 13:12:21"
+        },
+        {
+            "longitude": -71.528537,
+            "latitude": -16.401814,
+            "gpstime": 1755195152,
+            "speed": 20,
+            "course": 45,
+            "datetime": "2025-08-14 13:12:32"
+        },
+        {
+            "longitude": -71.528176,
+            "latitude": -16.401485,
+            "gpstime": 1755195162,
+            "speed": 10,
+            "course": 47,
+            "datetime": "2025-08-14 13:12:42"
+        },
+        {
+            "longitude": -71.528075,
+            "latitude": -16.40142,
+            "gpstime": 1755195171,
+            "speed": 9,
+            "course": 63,
+            "datetime": "2025-08-14 13:12:51"
+        },
+        {
+            "longitude": -71.527999,
+            "latitude": -16.40137,
+            "gpstime": 1755195174,
+            "speed": 15,
+            "course": 40,
+            "datetime": "2025-08-14 13:12:54"
+        },
+        {
+            "longitude": -71.527722,
+            "latitude": -16.401129,
+            "gpstime": 1755195184,
+            "speed": 9,
+            "course": 51,
+            "datetime": "2025-08-14 13:13:04"
+        },
+        {
+            "longitude": -71.527648,
+            "latitude": -16.401089,
+            "gpstime": 1755195195,
+            "speed": 0,
+            "course": 52,
+            "datetime": "2025-08-14 13:13:15"
+        },
+        {
+            "longitude": -71.527632,
+            "latitude": -16.401075,
+            "gpstime": 1755195205,
+            "speed": 7,
+            "course": 53,
+            "datetime": "2025-08-14 13:13:25"
+        },
+        {
+            "longitude": -71.527283,
+            "latitude": -16.400794,
+            "gpstime": 1755195215,
+            "speed": 26,
+            "course": 48,
+            "datetime": "2025-08-14 13:13:35"
+        },
+        {
+            "longitude": -71.5269,
+            "latitude": -16.400502,
+            "gpstime": 1755195226,
+            "speed": 0,
+            "course": 82,
+            "datetime": "2025-08-14 13:13:46"
+        },
+        {
+            "longitude": -71.526793,
+            "latitude": -16.400411,
+            "gpstime": 1755195230,
+            "speed": 16,
+            "course": 53,
+            "datetime": "2025-08-14 13:13:50"
+        },
+        {
+            "longitude": -71.526487,
+            "latitude": -16.400157,
+            "gpstime": 1755195241,
+            "speed": 0,
+            "course": 62,
+            "datetime": "2025-08-14 13:14:01"
+        },
+        {
+            "longitude": -71.526493,
+            "latitude": -16.400159,
+            "gpstime": 1755195251,
+            "speed": 0,
+            "course": 62,
+            "datetime": "2025-08-14 13:14:11"
+        },
+        {
+            "longitude": -71.526429,
+            "latitude": -16.400104,
+            "gpstime": 1755195261,
+            "speed": 12,
+            "course": 49,
+            "datetime": "2025-08-14 13:14:21"
+        },
+        {
+            "longitude": -71.526055,
+            "latitude": -16.399803,
+            "gpstime": 1755195272,
+            "speed": 12,
+            "course": 49,
+            "datetime": "2025-08-14 13:14:32"
+        },
+        {
+            "longitude": -71.526006,
+            "latitude": -16.399753,
+            "gpstime": 1755195282,
+            "speed": 0,
+            "course": 44,
+            "datetime": "2025-08-14 13:14:42"
+        },
+        {
+            "longitude": -71.525822,
+            "latitude": -16.399599,
+            "gpstime": 1755195292,
+            "speed": 12,
+            "course": 43,
+            "datetime": "2025-08-14 13:14:52"
+        },
+        {
+            "longitude": -71.525413,
+            "latitude": -16.399273,
+            "gpstime": 1755195303,
+            "speed": 23,
+            "course": 49,
+            "datetime": "2025-08-14 13:15:03"
+        },
+        {
+            "longitude": -71.524885,
+            "latitude": -16.39885,
+            "gpstime": 1755195313,
+            "speed": 28,
+            "course": 50,
+            "datetime": "2025-08-14 13:15:13"
+        },
+        {
+            "longitude": -71.524406,
+            "latitude": -16.398458,
+            "gpstime": 1755195323,
+            "speed": 20,
+            "course": 49,
+            "datetime": "2025-08-14 13:15:23"
+        },
+        {
+            "longitude": -71.52405,
+            "latitude": -16.398169,
+            "gpstime": 1755195334,
+            "speed": 17,
+            "course": 47,
+            "datetime": "2025-08-14 13:15:34"
+        },
+        {
+            "longitude": -71.52375,
+            "latitude": -16.397932,
+            "gpstime": 1755195344,
+            "speed": 3,
+            "course": 16,
+            "datetime": "2025-08-14 13:15:44"
+        },
+        {
+            "longitude": -71.523725,
+            "latitude": -16.397922,
+            "gpstime": 1755195354,
+            "speed": 0,
+            "course": 16,
+            "datetime": "2025-08-14 13:15:54"
+        },
+        {
+            "longitude": -71.523692,
+            "latitude": -16.397887,
+            "gpstime": 1755195365,
+            "speed": 2,
+            "course": 38,
+            "datetime": "2025-08-14 13:16:05"
+        },
+        {
+            "longitude": -71.523545,
+            "latitude": -16.397792,
+            "gpstime": 1755195375,
+            "speed": 11,
+            "course": 46,
+            "datetime": "2025-08-14 13:16:15"
+        },
+        {
+            "longitude": -71.523239,
+            "latitude": -16.397564,
+            "gpstime": 1755195385,
+            "speed": 11,
+            "course": 46,
+            "datetime": "2025-08-14 13:16:25"
+        },
+        {
+            "longitude": -71.52293,
+            "latitude": -16.397322,
+            "gpstime": 1755195396,
+            "speed": 14,
+            "course": 50,
+            "datetime": "2025-08-14 13:16:36"
+        },
+        {
+            "longitude": -71.522709,
+            "latitude": -16.397142,
+            "gpstime": 1755195406,
+            "speed": 14,
+            "course": 52,
+            "datetime": "2025-08-14 13:16:46"
+        },
+        {
+            "longitude": -71.522472,
+            "latitude": -16.396947,
+            "gpstime": 1755195416,
+            "speed": 6,
+            "course": 42,
+            "datetime": "2025-08-14 13:16:56"
+        },
+        {
+            "longitude": -71.522455,
+            "latitude": -16.396927,
+            "gpstime": 1755195427,
+            "speed": 0,
+            "course": 31,
+            "datetime": "2025-08-14 13:17:07"
+        },
+        {
+            "longitude": -71.522449,
+            "latitude": -16.396924,
+            "gpstime": 1755195437,
+            "speed": 0,
+            "course": 31,
+            "datetime": "2025-08-14 13:17:17"
+        },
+        {
+            "longitude": -71.522411,
+            "latitude": -16.396908,
+            "gpstime": 1755195445,
+            "speed": 11,
+            "course": 55,
+            "datetime": "2025-08-14 13:17:25"
+        },
+        {
+            "longitude": -71.522194,
+            "latitude": -16.39671,
+            "gpstime": 1755195456,
+            "speed": 6,
+            "course": 52,
+            "datetime": "2025-08-14 13:17:36"
+        },
+        {
+            "longitude": -71.521959,
+            "latitude": -16.396527,
+            "gpstime": 1755195466,
+            "speed": 20,
+            "course": 49,
+            "datetime": "2025-08-14 13:17:46"
+        },
+        {
+            "longitude": -71.52149,
+            "latitude": -16.39613,
+            "gpstime": 1755195476,
+            "speed": 23,
+            "course": 46,
+            "datetime": "2025-08-14 13:17:56"
+        },
+        {
+            "longitude": -71.521032,
+            "latitude": -16.395752,
+            "gpstime": 1755195487,
+            "speed": 21,
+            "course": 51,
+            "datetime": "2025-08-14 13:18:07"
+        },
+        {
+            "longitude": -71.520702,
+            "latitude": -16.395494,
+            "gpstime": 1755195498,
+            "speed": 0,
+            "course": 48,
+            "datetime": "2025-08-14 13:18:18"
+        },
+        {
+            "longitude": -71.520637,
+            "latitude": -16.395438,
+            "gpstime": 1755195507,
+            "speed": 15,
+            "course": 53,
+            "datetime": "2025-08-14 13:18:27"
+        },
+        {
+            "longitude": -71.520405,
+            "latitude": -16.395223,
+            "gpstime": 1755195514,
+            "speed": 20,
+            "course": 19,
+            "datetime": "2025-08-14 13:18:34"
+        },
+        {
+            "longitude": -71.520427,
+            "latitude": -16.39512,
+            "gpstime": 1755195516,
+            "speed": 22,
+            "course": 328,
+            "datetime": "2025-08-14 13:18:36"
+        },
+        {
+            "longitude": -71.520588,
+            "latitude": -16.394997,
+            "gpstime": 1755195519,
+            "speed": 26,
+            "course": 308,
+            "datetime": "2025-08-14 13:18:39"
+        },
+        {
+            "longitude": -71.521166,
+            "latitude": -16.394527,
+            "gpstime": 1755195529,
+            "speed": 31,
+            "course": 310,
+            "datetime": "2025-08-14 13:18:49"
+        },
+        {
+            "longitude": -71.521857,
+            "latitude": -16.393985,
+            "gpstime": 1755195540,
+            "speed": 30,
+            "course": 308,
+            "datetime": "2025-08-14 13:19:00"
+        },
+        {
+            "longitude": -71.52232,
+            "latitude": -16.393616,
+            "gpstime": 1755195550,
+            "speed": 7,
+            "course": 310,
+            "datetime": "2025-08-14 13:19:10"
+        },
+        {
+            "longitude": -71.522559,
+            "latitude": -16.393422,
+            "gpstime": 1755195560,
+            "speed": 19,
+            "course": 310,
+            "datetime": "2025-08-14 13:19:20"
+        },
+        {
+            "longitude": -71.523123,
+            "latitude": -16.392972,
+            "gpstime": 1755195571,
+            "speed": 29,
+            "course": 308,
+            "datetime": "2025-08-14 13:19:31"
+        },
+        {
+            "longitude": -71.523714,
+            "latitude": -16.392516,
+            "gpstime": 1755195581,
+            "speed": 23,
+            "course": 310,
+            "datetime": "2025-08-14 13:19:41"
+        },
+        {
+            "longitude": -71.5241,
+            "latitude": -16.392205,
+            "gpstime": 1755195591,
+            "speed": 21,
+            "course": 309,
+            "datetime": "2025-08-14 13:19:51"
+        },
+        {
+            "longitude": -71.524754,
+            "latitude": -16.391692,
+            "gpstime": 1755195602,
+            "speed": 32,
+            "course": 309,
+            "datetime": "2025-08-14 13:20:02"
+        },
+        {
+            "longitude": -71.525409,
+            "latitude": -16.391169,
+            "gpstime": 1755195612,
+            "speed": 33,
+            "course": 307,
+            "datetime": "2025-08-14 13:20:12"
+        },
+        {
+            "longitude": -71.526165,
+            "latitude": -16.390552,
+            "gpstime": 1755195622,
+            "speed": 42,
+            "course": 316,
+            "datetime": "2025-08-14 13:20:22"
+        },
+        {
+            "longitude": -71.526413,
+            "latitude": -16.390209,
+            "gpstime": 1755195626,
+            "speed": 38,
+            "course": 333,
+            "datetime": "2025-08-14 13:20:26"
+        },
+        {
+            "longitude": -71.52651,
+            "latitude": -16.389792,
+            "gpstime": 1755195633,
+            "speed": 17,
+            "course": 54,
+            "datetime": "2025-08-14 13:20:33"
+        },
+        {
+            "longitude": -71.526382,
+            "latitude": -16.389664,
+            "gpstime": 1755195643,
+            "speed": 12,
+            "course": 13,
+            "datetime": "2025-08-14 13:20:43"
+        },
+        {
+            "longitude": -71.526374,
+            "latitude": -16.389606,
+            "gpstime": 1755195645,
+            "speed": 11,
+            "course": 350,
+            "datetime": "2025-08-14 13:20:45"
+        },
+        {
+            "longitude": -71.52648,
+            "latitude": -16.389397,
+            "gpstime": 1755195655,
+            "speed": 10,
+            "course": 348,
+            "datetime": "2025-08-14 13:20:55"
+        },
+        {
+            "longitude": -71.526397,
+            "latitude": -16.38929,
+            "gpstime": 1755195660,
+            "speed": 13,
+            "course": 52,
+            "datetime": "2025-08-14 13:21:00"
+        },
+        {
+            "longitude": -71.526216,
+            "latitude": -16.389152,
+            "gpstime": 1755195670,
+            "speed": 0,
+            "course": 55,
+            "datetime": "2025-08-14 13:21:10"
+        },
+        {
+            "longitude": -71.526147,
+            "latitude": -16.388962,
+            "gpstime": 1755195681,
+            "speed": 15,
+            "course": 310,
+            "datetime": "2025-08-14 13:21:21"
+        },
+        {
+            "longitude": -71.526365,
+            "latitude": -16.388667,
+            "gpstime": 1755195689,
+            "speed": 21,
+            "course": 328,
+            "datetime": "2025-08-14 13:21:29"
+        },
+        {
+            "longitude": -71.526473,
+            "latitude": -16.388365,
+            "gpstime": 1755195695,
+            "speed": 20,
+            "course": 351,
+            "datetime": "2025-08-14 13:21:35"
+        },
+        {
+            "longitude": -71.52655,
+            "latitude": -16.387998,
+            "gpstime": 1755195705,
+            "speed": 13,
+            "course": 343,
+            "datetime": "2025-08-14 13:21:45"
+        },
+        {
+            "longitude": -71.52668,
+            "latitude": -16.387584,
+            "gpstime": 1755195715,
+            "speed": 22,
+            "course": 342,
+            "datetime": "2025-08-14 13:21:55"
+        },
+        {
+            "longitude": -71.526865,
+            "latitude": -16.386973,
+            "gpstime": 1755195727,
+            "speed": 16,
+            "course": 344,
+            "datetime": "2025-08-14 13:22:07"
+        },
+        {
+            "longitude": -71.526903,
+            "latitude": -16.38647,
+            "gpstime": 1755195737,
+            "speed": 27,
+            "course": 29,
+            "datetime": "2025-08-14 13:22:17"
+        },
+        {
+            "longitude": -71.526518,
+            "latitude": -16.385912,
+            "gpstime": 1755195746,
+            "speed": 30,
+            "course": 34,
+            "datetime": "2025-08-14 13:22:26"
+        },
+        {
+            "longitude": -71.526016,
+            "latitude": -16.385183,
+            "gpstime": 1755195758,
+            "speed": 27,
+            "course": 33,
+            "datetime": "2025-08-14 13:22:38"
+        },
+        {
+            "longitude": -71.525657,
+            "latitude": -16.38461,
+            "gpstime": 1755195768,
+            "speed": 27,
+            "course": 33,
+            "datetime": "2025-08-14 13:22:48"
+        },
+        {
+            "longitude": -71.525449,
+            "latitude": -16.384264,
+            "gpstime": 1755195778,
+            "speed": 0,
+            "course": 311,
+            "datetime": "2025-08-14 13:22:58"
+        },
+        {
+            "longitude": -71.525427,
+            "latitude": -16.384185,
+            "gpstime": 1755195789,
+            "speed": 1,
+            "course": 2,
+            "datetime": "2025-08-14 13:23:09"
+        },
+        {
+            "longitude": -71.52542,
+            "latitude": -16.384173,
+            "gpstime": 1755195799,
+            "speed": 0,
+            "course": 2,
+            "datetime": "2025-08-14 13:23:19"
+        },
+        {
+            "longitude": -71.525429,
+            "latitude": -16.384149,
+            "gpstime": 1755195898,
+            "speed": 0,
+            "course": 2,
+            "datetime": "2025-08-14 13:24:58"
+        },
+        {
+            "longitude": -71.525417,
+            "latitude": -16.384109,
+            "gpstime": 1755195909,
+            "speed": 6,
+            "course": 359,
+            "datetime": "2025-08-14 13:25:09"
+        },
+        {
+            "longitude": -71.525436,
+            "latitude": -16.384069,
+            "gpstime": 1755195911,
+            "speed": 12,
+            "course": 318,
+            "datetime": "2025-08-14 13:25:11"
+        },
+        {
+            "longitude": -71.525587,
+            "latitude": -16.384047,
+            "gpstime": 1755195915,
+            "speed": 18,
+            "course": 254,
+            "datetime": "2025-08-14 13:25:15"
+        },
+        {
+            "longitude": -71.525678,
+            "latitude": -16.384045,
+            "gpstime": 1755195917,
+            "speed": 15,
+            "course": 284,
+            "datetime": "2025-08-14 13:25:17"
+        },
+        {
+            "longitude": -71.525742,
+            "latitude": -16.383998,
+            "gpstime": 1755195919,
+            "speed": 15,
+            "course": 321,
+            "datetime": "2025-08-14 13:25:19"
+        },
+        {
+            "longitude": -71.525712,
+            "latitude": -16.383931,
+            "gpstime": 1755195921,
+            "speed": 14,
+            "course": 39,
+            "datetime": "2025-08-14 13:25:21"
+        },
+        {
+            "longitude": -71.52544,
+            "latitude": -16.383678,
+            "gpstime": 1755195931,
+            "speed": 2,
+            "course": 42,
+            "datetime": "2025-08-14 13:25:31"
+        },
+        {
+            "longitude": -71.525184,
+            "latitude": -16.38347,
+            "gpstime": 1755195940,
+            "speed": 18,
+            "course": 63,
+            "datetime": "2025-08-14 13:25:40"
+        },
+        {
+            "longitude": -71.524963,
+            "latitude": -16.383374,
+            "gpstime": 1755195945,
+            "speed": 18,
+            "course": 46,
+            "datetime": "2025-08-14 13:25:45"
+        },
+        {
+            "longitude": -71.524927,
+            "latitude": -16.383298,
+            "gpstime": 1755195947,
+            "speed": 18,
+            "course": 10,
+            "datetime": "2025-08-14 13:25:47"
+        },
+        {
+            "longitude": -71.524942,
+            "latitude": -16.383168,
+            "gpstime": 1755195950,
+            "speed": 13,
+            "course": 329,
+            "datetime": "2025-08-14 13:25:50"
+        },
+        {
+            "longitude": -71.524987,
+            "latitude": -16.383112,
+            "gpstime": 1755195952,
+            "speed": 15,
+            "course": 312,
+            "datetime": "2025-08-14 13:25:52"
+        },
+        {
+            "longitude": -71.525855,
+            "latitude": -16.382546,
+            "gpstime": 1755195963,
+            "speed": 56,
+            "course": 303,
+            "datetime": "2025-08-14 13:26:03"
+        },
+        {
+            "longitude": -71.527485,
+            "latitude": -16.381598,
+            "gpstime": 1755195973,
+            "speed": 83,
+            "course": 280,
+            "datetime": "2025-08-14 13:26:13"
+        },
+        {
+            "longitude": -71.528637,
+            "latitude": -16.381619,
+            "gpstime": 1755195978,
+            "speed": 91,
+            "course": 263,
+            "datetime": "2025-08-14 13:26:18"
+        },
+        {
+            "longitude": -71.530989,
+            "latitude": -16.382219,
+            "gpstime": 1755195988,
+            "speed": 98,
+            "course": 252,
+            "datetime": "2025-08-14 13:26:28"
+        },
+        {
+            "longitude": -71.53272,
+            "latitude": -16.382435,
+            "gpstime": 1755195995,
+            "speed": 92,
+            "course": 275,
+            "datetime": "2025-08-14 13:26:35"
+        },
+        {
+            "longitude": -71.533853,
+            "latitude": -16.382162,
+            "gpstime": 1755196000,
+            "speed": 88,
+            "course": 290,
+            "datetime": "2025-08-14 13:26:40"
+        },
+        {
+            "longitude": -71.536287,
+            "latitude": -16.381395,
+            "gpstime": 1755196011,
+            "speed": 89,
+            "course": 287,
+            "datetime": "2025-08-14 13:26:51"
+        },
+        {
+            "longitude": -71.537368,
+            "latitude": -16.381154,
+            "gpstime": 1755196017,
+            "speed": 55,
+            "course": 271,
+            "datetime": "2025-08-14 13:26:57"
+        },
+        {
+            "longitude": -71.538309,
+            "latitude": -16.38121,
+            "gpstime": 1755196028,
+            "speed": 13,
+            "course": 265,
+            "datetime": "2025-08-14 13:27:08"
+        },
+        {
+            "longitude": -71.538629,
+            "latitude": -16.381187,
+            "gpstime": 1755196036,
+            "speed": 29,
+            "course": 292,
+            "datetime": "2025-08-14 13:27:16"
+        },
+        {
+            "longitude": -71.538787,
+            "latitude": -16.381094,
+            "gpstime": 1755196038,
+            "speed": 43,
+            "course": 311,
+            "datetime": "2025-08-14 13:27:18"
+        },
+        {
+            "longitude": -71.538913,
+            "latitude": -16.380939,
+            "gpstime": 1755196040,
+            "speed": 38,
+            "course": 333,
+            "datetime": "2025-08-14 13:27:20"
+        },
+        {
+            "longitude": -71.538968,
+            "latitude": -16.380755,
+            "gpstime": 1755196042,
+            "speed": 37,
+            "course": 353,
+            "datetime": "2025-08-14 13:27:22"
+        },
+        {
+            "longitude": -71.538923,
+            "latitude": -16.380528,
+            "gpstime": 1755196045,
+            "speed": 24,
+            "course": 22,
+            "datetime": "2025-08-14 13:27:25"
+        },
+        {
+            "longitude": -71.538818,
+            "latitude": -16.380104,
+            "gpstime": 1755196052,
+            "speed": 25,
+            "course": 6,
+            "datetime": "2025-08-14 13:27:32"
+        },
+        {
+            "longitude": -71.538752,
+            "latitude": -16.379379,
+            "gpstime": 1755196064,
+            "speed": 21,
+            "course": 354,
+            "datetime": "2025-08-14 13:27:44"
+        },
+        {
+            "longitude": -71.538801,
+            "latitude": -16.378874,
+            "gpstime": 1755196074,
+            "speed": 16,
+            "course": 359,
+            "datetime": "2025-08-14 13:27:54"
+        },
+        {
+            "longitude": -71.538832,
+            "latitude": -16.378344,
+            "gpstime": 1755196084,
+            "speed": 29,
+            "course": 345,
+            "datetime": "2025-08-14 13:28:04"
+        },
+        {
+            "longitude": -71.538857,
+            "latitude": -16.377668,
+            "gpstime": 1755196090,
+            "speed": 51,
+            "course": 1,
+            "datetime": "2025-08-14 13:28:10"
+        },
+        {
+            "longitude": -71.538868,
+            "latitude": -16.376545,
+            "gpstime": 1755196100,
+            "speed": 36,
+            "course": 358,
+            "datetime": "2025-08-14 13:28:20"
+        },
+        {
+            "longitude": -71.538833,
+            "latitude": -16.376145,
+            "gpstime": 1755196111,
+            "speed": 0,
+            "course": 17,
+            "datetime": "2025-08-14 13:28:31"
+        },
+        {
+            "longitude": -71.538784,
+            "latitude": -16.376062,
+            "gpstime": 1755196114,
+            "speed": 17,
+            "course": 37,
+            "datetime": "2025-08-14 13:28:34"
+        },
+        {
+            "longitude": -71.538672,
+            "latitude": -16.375968,
+            "gpstime": 1755196117,
+            "speed": 25,
+            "course": 54,
+            "datetime": "2025-08-14 13:28:37"
+        },
+        {
+            "longitude": -71.538549,
+            "latitude": -16.375903,
+            "gpstime": 1755196119,
+            "speed": 31,
+            "course": 69,
+            "datetime": "2025-08-14 13:28:39"
+        },
+        {
+            "longitude": -71.53776,
+            "latitude": -16.37561,
+            "gpstime": 1755196129,
+            "speed": 36,
+            "course": 68,
+            "datetime": "2025-08-14 13:28:49"
+        },
+        {
+            "longitude": -71.537057,
+            "latitude": -16.375345,
+            "gpstime": 1755196140,
+            "speed": 22,
+            "course": 65,
+            "datetime": "2025-08-14 13:29:00"
+        },
+        {
+            "longitude": -71.536633,
+            "latitude": -16.375071,
+            "gpstime": 1755196146,
+            "speed": 42,
+            "course": 37,
+            "datetime": "2025-08-14 13:29:06"
+        },
+        {
+            "longitude": -71.536408,
+            "latitude": -16.374623,
+            "gpstime": 1755196150,
+            "speed": 55,
+            "course": 13,
+            "datetime": "2025-08-14 13:29:10"
+        },
+        {
+            "longitude": -71.536489,
+            "latitude": -16.373948,
+            "gpstime": 1755196155,
+            "speed": 50,
+            "course": 334,
+            "datetime": "2025-08-14 13:29:15"
+        },
+        {
+            "longitude": -71.536849,
+            "latitude": -16.373163,
+            "gpstime": 1755196165,
+            "speed": 41,
+            "course": 341,
+            "datetime": "2025-08-14 13:29:25"
+        },
+        {
+            "longitude": -71.537109,
+            "latitude": -16.372415,
+            "gpstime": 1755196176,
+            "speed": 36,
+            "course": 343,
+            "datetime": "2025-08-14 13:29:36"
+        },
+        {
+            "longitude": -71.537457,
+            "latitude": -16.371476,
+            "gpstime": 1755196186,
+            "speed": 40,
+            "course": 341,
+            "datetime": "2025-08-14 13:29:46"
+        },
+        {
+            "longitude": -71.537625,
+            "latitude": -16.370814,
+            "gpstime": 1755196193,
+            "speed": 35,
+            "course": 326,
+            "datetime": "2025-08-14 13:29:53"
+        },
+        {
+            "longitude": -71.53804,
+            "latitude": -16.370065,
+            "gpstime": 1755196205,
+            "speed": 29,
+            "course": 337,
+            "datetime": "2025-08-14 13:30:05"
+        },
+        {
+            "longitude": -71.538285,
+            "latitude": -16.369568,
+            "gpstime": 1755196215,
+            "speed": 22,
+            "course": 335,
+            "datetime": "2025-08-14 13:30:15"
+        },
+        {
+            "longitude": -71.538523,
+            "latitude": -16.369066,
+            "gpstime": 1755196225,
+            "speed": 27,
+            "course": 342,
+            "datetime": "2025-08-14 13:30:25"
+        },
+        {
+            "longitude": -71.538559,
+            "latitude": -16.368772,
+            "gpstime": 1755196229,
+            "speed": 32,
+            "course": 5,
+            "datetime": "2025-08-14 13:30:29"
+        },
+        {
+            "longitude": -71.538499,
+            "latitude": -16.367947,
+            "gpstime": 1755196239,
+            "speed": 34,
+            "course": 354,
+            "datetime": "2025-08-14 13:30:39"
+        },
+        {
+            "longitude": -71.538724,
+            "latitude": -16.367075,
+            "gpstime": 1755196250,
+            "speed": 22,
+            "course": 332,
+            "datetime": "2025-08-14 13:30:50"
+        },
+        {
+            "longitude": -71.538991,
+            "latitude": -16.366513,
+            "gpstime": 1755196260,
+            "speed": 30,
+            "course": 337,
+            "datetime": "2025-08-14 13:31:00"
+        },
+        {
+            "longitude": -71.539339,
+            "latitude": -16.365724,
+            "gpstime": 1755196270,
+            "speed": 36,
+            "course": 335,
+            "datetime": "2025-08-14 13:31:10"
+        },
+        {
+            "longitude": -71.539755,
+            "latitude": -16.36479,
+            "gpstime": 1755196281,
+            "speed": 33,
+            "course": 335,
+            "datetime": "2025-08-14 13:31:21"
+        },
+        {
+            "longitude": -71.540038,
+            "latitude": -16.364214,
+            "gpstime": 1755196291,
+            "speed": 15,
+            "course": 332,
+            "datetime": "2025-08-14 13:31:31"
+        },
+        {
+            "longitude": -71.540155,
+            "latitude": -16.363978,
+            "gpstime": 1755196301,
+            "speed": 10,
+            "course": 346,
+            "datetime": "2025-08-14 13:31:41"
+        },
+        {
+            "longitude": -71.540184,
+            "latitude": -16.363698,
+            "gpstime": 1755196312,
+            "speed": 11,
+            "course": 354,
+            "datetime": "2025-08-14 13:31:52"
+        },
+        {
+            "longitude": -71.540216,
+            "latitude": -16.363419,
+            "gpstime": 1755196322,
+            "speed": 11,
+            "course": 1,
+            "datetime": "2025-08-14 13:32:02"
+        },
+        {
+            "longitude": -71.540239,
+            "latitude": -16.363169,
+            "gpstime": 1755196329,
+            "speed": 16,
+            "course": 344,
+            "datetime": "2025-08-14 13:32:09"
+        },
+        {
+            "longitude": -71.540477,
+            "latitude": -16.362633,
+            "gpstime": 1755196339,
+            "speed": 29,
+            "course": 347,
+            "datetime": "2025-08-14 13:32:19"
+        },
+        {
+            "longitude": -71.540554,
+            "latitude": -16.36201,
+            "gpstime": 1755196349,
+            "speed": 24,
+            "course": 352,
+            "datetime": "2025-08-14 13:32:29"
+        },
+        {
+            "longitude": -71.540613,
+            "latitude": -16.361372,
+            "gpstime": 1755196360,
+            "speed": 27,
+            "course": 355,
+            "datetime": "2025-08-14 13:32:40"
+        },
+        {
+            "longitude": -71.540688,
+            "latitude": -16.360644,
+            "gpstime": 1755196370,
+            "speed": 34,
+            "course": 356,
+            "datetime": "2025-08-14 13:32:50"
+        },
+        {
+            "longitude": -71.540757,
+            "latitude": -16.359759,
+            "gpstime": 1755196380,
+            "speed": 37,
+            "course": 354,
+            "datetime": "2025-08-14 13:33:00"
+        },
+        {
+            "longitude": -71.540883,
+            "latitude": -16.358299,
+            "gpstime": 1755196391,
+            "speed": 62,
+            "course": 353,
+            "datetime": "2025-08-14 13:33:11"
+        },
+        {
+            "longitude": -71.541068,
+            "latitude": -16.356806,
+            "gpstime": 1755196401,
+            "speed": 51,
+            "course": 353,
+            "datetime": "2025-08-14 13:33:21"
+        },
+        {
+            "longitude": -71.541129,
+            "latitude": -16.356129,
+            "gpstime": 1755196411,
+            "speed": 13,
+            "course": 358,
+            "datetime": "2025-08-14 13:33:31"
+        },
+        {
+            "longitude": -71.541107,
+            "latitude": -16.355208,
+            "gpstime": 1755196422,
+            "speed": 52,
+            "course": 2,
+            "datetime": "2025-08-14 13:33:42"
+        },
+        {
+            "longitude": -71.541096,
+            "latitude": -16.354081,
+            "gpstime": 1755196432,
+            "speed": 14,
+            "course": 5,
+            "datetime": "2025-08-14 13:33:52"
+        },
+        {
+            "longitude": -71.541029,
+            "latitude": -16.353242,
+            "gpstime": 1755196442,
+            "speed": 47,
+            "course": 5,
+            "datetime": "2025-08-14 13:34:02"
+        },
+        {
+            "longitude": -71.540909,
+            "latitude": -16.351978,
+            "gpstime": 1755196453,
+            "speed": 30,
+            "course": 4,
+            "datetime": "2025-08-14 13:34:13"
+        },
+        {
+            "longitude": -71.540918,
+            "latitude": -16.351783,
+            "gpstime": 1755196457,
+            "speed": 14,
+            "course": 310,
+            "datetime": "2025-08-14 13:34:17"
+        },
+        {
+            "longitude": -71.540987,
+            "latitude": -16.351775,
+            "gpstime": 1755196459,
+            "speed": 12,
+            "course": 265,
+            "datetime": "2025-08-14 13:34:19"
+        },
+        {
+            "longitude": -71.541753,
+            "latitude": -16.351742,
+            "gpstime": 1755196470,
+            "speed": 32,
+            "course": 276,
+            "datetime": "2025-08-14 13:34:30"
+        },
+        {
+            "longitude": -71.542337,
+            "latitude": -16.351699,
+            "gpstime": 1755196480,
+            "speed": 14,
+            "course": 274,
+            "datetime": "2025-08-14 13:34:40"
+        },
+        {
+            "longitude": -71.542912,
+            "latitude": -16.35164,
+            "gpstime": 1755196490,
+            "speed": 21,
+            "course": 277,
+            "datetime": "2025-08-14 13:34:50"
+        },
+        {
+            "longitude": -71.543715,
+            "latitude": -16.351592,
+            "gpstime": 1755196501,
+            "speed": 24,
+            "course": 267,
+            "datetime": "2025-08-14 13:35:01"
+        },
+        {
+            "longitude": -71.543907,
+            "latitude": -16.351569,
+            "gpstime": 1755196505,
+            "speed": 16,
+            "course": 322,
+            "datetime": "2025-08-14 13:35:05"
+        },
+        {
+            "longitude": -71.543932,
+            "latitude": -16.351469,
+            "gpstime": 1755196507,
+            "speed": 24,
+            "course": 356,
+            "datetime": "2025-08-14 13:35:07"
+        },
+        {
+            "longitude": -71.543902,
+            "latitude": -16.351331,
+            "gpstime": 1755196509,
+            "speed": 32,
+            "course": 12,
+            "datetime": "2025-08-14 13:35:09"
+        },
+        {
+            "longitude": -71.543786,
+            "latitude": -16.350205,
+            "gpstime": 1755196520,
+            "speed": 41,
+            "course": 5,
+            "datetime": "2025-08-14 13:35:20"
+        },
+        {
+            "longitude": -71.543745,
+            "latitude": -16.349552,
+            "gpstime": 1755196530,
+            "speed": 33,
+            "course": 2,
+            "datetime": "2025-08-14 13:35:30"
+        },
+        {
+            "longitude": -71.543667,
+            "latitude": -16.348663,
+            "gpstime": 1755196540,
+            "speed": 38,
+            "course": 7,
+            "datetime": "2025-08-14 13:35:40"
+        },
+        {
+            "longitude": -71.543675,
+            "latitude": -16.348115,
+            "gpstime": 1755196547,
+            "speed": 24,
+            "course": 313,
+            "datetime": "2025-08-14 13:35:47"
+        },
+        {
+            "longitude": -71.543814,
+            "latitude": -16.348085,
+            "gpstime": 1755196549,
+            "speed": 29,
+            "course": 276,
+            "datetime": "2025-08-14 13:35:49"
+        },
+        {
+            "longitude": -71.544584,
+            "latitude": -16.347947,
+            "gpstime": 1755196559,
+            "speed": 24,
+            "course": 284,
+            "datetime": "2025-08-14 13:35:59"
+        },
+        {
+            "longitude": -71.544818,
+            "latitude": -16.34787,
+            "gpstime": 1755196563,
+            "speed": 24,
+            "course": 317,
+            "datetime": "2025-08-14 13:36:03"
+        },
+        {
+            "longitude": -71.545199,
+            "latitude": -16.347511,
+            "gpstime": 1755196573,
+            "speed": 3,
+            "course": 314,
+            "datetime": "2025-08-14 13:36:13"
+        },
+        {
+            "longitude": -71.5453,
+            "latitude": -16.347509,
+            "gpstime": 1755196578,
+            "speed": 15,
+            "course": 224,
+            "datetime": "2025-08-14 13:36:18"
+        },
+        {
+            "longitude": -71.545351,
+            "latitude": -16.347599,
+            "gpstime": 1755196580,
+            "speed": 17,
+            "course": 200,
+            "datetime": "2025-08-14 13:36:20"
+        },
+        {
+            "longitude": -71.545492,
+            "latitude": -16.348372,
+            "gpstime": 1755196590,
+            "speed": 40,
+            "course": 192,
+            "datetime": "2025-08-14 13:36:30"
+        },
+        {
+            "longitude": -71.545657,
+            "latitude": -16.349272,
+            "gpstime": 1755196601,
+            "speed": 15,
+            "course": 189,
+            "datetime": "2025-08-14 13:36:41"
+        },
+        {
+            "longitude": -71.545664,
+            "latitude": -16.349333,
+            "gpstime": 1755196611,
+            "speed": 0,
+            "course": 192,
+            "datetime": "2025-08-14 13:36:51"
+        },
+        {
+            "longitude": -71.54567,
+            "latitude": -16.349476,
+            "gpstime": 1755196621,
+            "speed": 19,
+            "course": 188,
+            "datetime": "2025-08-14 13:37:01"
+        },
+        {
+            "longitude": -71.545759,
+            "latitude": -16.349798,
+            "gpstime": 1755196628,
+            "speed": 19,
+            "course": 220,
+            "datetime": "2025-08-14 13:37:08"
+        },
+        {
+            "longitude": -71.545842,
+            "latitude": -16.349802,
+            "gpstime": 1755196630,
+            "speed": 16,
+            "course": 296,
+            "datetime": "2025-08-14 13:37:10"
+        },
+        {
+            "longitude": -71.546036,
+            "latitude": -16.349715,
+            "gpstime": 1755196637,
+            "speed": 13,
+            "course": 271,
+            "datetime": "2025-08-14 13:37:17"
+        },
+        {
+            "longitude": -71.54612,
+            "latitude": -16.349687,
+            "gpstime": 1755196639,
+            "speed": 20,
+            "course": 299,
+            "datetime": "2025-08-14 13:37:19"
+        },
+        {
+            "longitude": -71.546665,
+            "latitude": -16.349434,
+            "gpstime": 1755196649,
+            "speed": 24,
+            "course": 298,
+            "datetime": "2025-08-14 13:37:29"
+        },
+        {
+            "longitude": -71.5472,
+            "latitude": -16.349173,
+            "gpstime": 1755196659,
+            "speed": 22,
+            "course": 299,
+            "datetime": "2025-08-14 13:37:39"
+        },
+        {
+            "longitude": -71.547748,
+            "latitude": -16.348905,
+            "gpstime": 1755196670,
+            "speed": 9,
+            "course": 300,
+            "datetime": "2025-08-14 13:37:50"
+        },
+        {
+            "longitude": -71.547796,
+            "latitude": -16.34884,
+            "gpstime": 1755196675,
+            "speed": 11,
+            "course": 347,
+            "datetime": "2025-08-14 13:37:55"
+        },
+        {
+            "longitude": -71.547733,
+            "latitude": -16.348744,
+            "gpstime": 1755196678,
+            "speed": 18,
+            "course": 46,
+            "datetime": "2025-08-14 13:37:58"
+        },
+        {
+            "longitude": -71.547187,
+            "latitude": -16.348096,
+            "gpstime": 1755196689,
+            "speed": 41,
+            "course": 41,
+            "datetime": "2025-08-14 13:38:09"
+        },
+        {
+            "longitude": -71.546573,
+            "latitude": -16.347369,
+            "gpstime": 1755196699,
+            "speed": 22,
+            "course": 27,
+            "datetime": "2025-08-14 13:38:19"
+        },
+        {
+            "longitude": -71.54657,
+            "latitude": -16.347258,
+            "gpstime": 1755196701,
+            "speed": 22,
+            "course": 343,
+            "datetime": "2025-08-14 13:38:21"
+        },
+        {
+            "longitude": -71.546681,
+            "latitude": -16.347189,
+            "gpstime": 1755196703,
+            "speed": 24,
+            "course": 302,
+            "datetime": "2025-08-14 13:38:23"
+        },
+        {
+            "longitude": -71.547268,
+            "latitude": -16.346779,
+            "gpstime": 1755196713,
+            "speed": 23,
+            "course": 311,
+            "datetime": "2025-08-14 13:38:33"
+        },
+        {
+            "longitude": -71.547341,
+            "latitude": -16.3467,
+            "gpstime": 1755196715,
+            "speed": 19,
+            "course": 329,
+            "datetime": "2025-08-14 13:38:35"
+        },
+        {
+            "longitude": -71.547315,
+            "latitude": -16.34657,
+            "gpstime": 1755196718,
+            "speed": 20,
+            "course": 44,
+            "datetime": "2025-08-14 13:38:38"
+        },
+        {
+            "longitude": -71.547218,
+            "latitude": -16.346415,
+            "gpstime": 1755196722,
+            "speed": 14,
+            "course": 15,
+            "datetime": "2025-08-14 13:38:42"
+        },
+        {
+            "longitude": -71.547147,
+            "latitude": -16.346333,
+            "gpstime": 1755196732,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:38:52"
+        },
+        {
+            "longitude": -71.547147,
+            "latitude": -16.346334,
+            "gpstime": 1755196742,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:39:02"
+        },
+        {
+            "longitude": -71.547141,
+            "latitude": -16.346332,
+            "gpstime": 1755196753,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:39:13"
+        },
+        {
+            "longitude": -71.547138,
+            "latitude": -16.346333,
+            "gpstime": 1755196763,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:39:23"
+        },
+        {
+            "longitude": -71.547137,
+            "latitude": -16.346333,
+            "gpstime": 1755196773,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:39:33"
+        },
+        {
+            "longitude": -71.547134,
+            "latitude": -16.346334,
+            "gpstime": 1755196784,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:39:44"
+        },
+        {
+            "longitude": -71.547132,
+            "latitude": -16.346335,
+            "gpstime": 1755196794,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:39:54"
+        },
+        {
+            "longitude": -71.547128,
+            "latitude": -16.346337,
+            "gpstime": 1755196805,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:40:05"
+        },
+        {
+            "longitude": -71.547125,
+            "latitude": -16.346338,
+            "gpstime": 1755196814,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:40:14"
+        },
+        {
+            "longitude": -71.547123,
+            "latitude": -16.34634,
+            "gpstime": 1755196826,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:40:26"
+        },
+        {
+            "longitude": -71.547123,
+            "latitude": -16.346342,
+            "gpstime": 1755196836,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:40:36"
+        },
+        {
+            "longitude": -71.547122,
+            "latitude": -16.346344,
+            "gpstime": 1755196846,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:40:46"
+        },
+        {
+            "longitude": -71.54712,
+            "latitude": -16.346344,
+            "gpstime": 1755196867,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:41:07"
+        },
+        {
+            "longitude": -71.547118,
+            "latitude": -16.346345,
+            "gpstime": 1755196877,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:41:17"
+        },
+        {
+            "longitude": -71.547116,
+            "latitude": -16.346345,
+            "gpstime": 1755196888,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:41:28"
+        },
+        {
+            "longitude": -71.547114,
+            "latitude": -16.346345,
+            "gpstime": 1755196898,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:41:38"
+        },
+        {
+            "longitude": -71.547113,
+            "latitude": -16.346345,
+            "gpstime": 1755196908,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:41:48"
+        },
+        {
+            "longitude": -71.547113,
+            "latitude": -16.346344,
+            "gpstime": 1755196919,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 13:41:59"
+        },
+        {
+            "longitude": -71.547103,
+            "latitude": -16.346327,
+            "gpstime": 1755200139,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 14:35:39"
+        },
+        {
+            "longitude": -71.547103,
+            "latitude": -16.346335,
+            "gpstime": 1755200170,
+            "speed": 0,
+            "course": 35,
+            "datetime": "2025-08-14 14:36:10"
+        },
+        {
+            "longitude": -71.547015,
+            "latitude": -16.346268,
+            "gpstime": 1755200180,
+            "speed": 6,
+            "course": 50,
+            "datetime": "2025-08-14 14:36:20"
+        },
+        {
+            "longitude": -71.547,
+            "latitude": -16.346232,
+            "gpstime": 1755200190,
+            "speed": 1,
+            "course": 44,
+            "datetime": "2025-08-14 14:36:30"
+        },
+        {
+            "longitude": -71.547029,
+            "latitude": -16.34624,
+            "gpstime": 1755200201,
+            "speed": 0,
+            "course": 44,
+            "datetime": "2025-08-14 14:36:41"
+        },
+        {
+            "longitude": -71.54704,
+            "latitude": -16.346254,
+            "gpstime": 1755200211,
+            "speed": 0,
+            "course": 44,
+            "datetime": "2025-08-14 14:36:51"
+        },
+        {
+            "longitude": -71.547052,
+            "latitude": -16.346266,
+            "gpstime": 1755200221,
+            "speed": 0,
+            "course": 44,
+            "datetime": "2025-08-14 14:37:01"
+        },
+        {
+            "longitude": -71.547068,
+            "latitude": -16.34625,
+            "gpstime": 1755200231,
+            "speed": 4,
+            "course": 301,
+            "datetime": "2025-08-14 14:37:11"
+        },
+        {
+            "longitude": -71.547075,
+            "latitude": -16.346245,
+            "gpstime": 1755200243,
+            "speed": 0,
+            "course": 301,
+            "datetime": "2025-08-14 14:37:23"
+        },
+        {
+            "longitude": -71.547078,
+            "latitude": -16.346247,
+            "gpstime": 1755200253,
+            "speed": 0,
+            "course": 301,
+            "datetime": "2025-08-14 14:37:33"
+        },
+        {
+            "longitude": -71.547082,
+            "latitude": -16.346237,
+            "gpstime": 1755200263,
+            "speed": 0,
+            "course": 301,
+            "datetime": "2025-08-14 14:37:43"
+        },
+        {
+            "longitude": -71.547088,
+            "latitude": -16.34624,
+            "gpstime": 1755200274,
+            "speed": 0,
+            "course": 301,
+            "datetime": "2025-08-14 14:37:54"
+        },
+        {
+            "longitude": -71.547098,
+            "latitude": -16.346232,
+            "gpstime": 1755200284,
+            "speed": 0,
+            "course": 301,
+            "datetime": "2025-08-14 14:38:04"
+        },
+        {
+            "longitude": -71.547126,
+            "latitude": -16.346222,
+            "gpstime": 1755200294,
+            "speed": 0,
+            "course": 301,
+            "datetime": "2025-08-14 14:38:14"
+        },
+        {
+            "longitude": -71.547099,
+            "latitude": -16.34619,
+            "gpstime": 1755200305,
+            "speed": 0,
+            "course": 47,
+            "datetime": "2025-08-14 14:38:25"
+        },
+        {
+            "longitude": -71.547121,
+            "latitude": -16.346201,
+            "gpstime": 1755200315,
+            "speed": 1,
+            "course": 47,
+            "datetime": "2025-08-14 14:38:35"
+        },
+        {
+            "longitude": -71.547115,
+            "latitude": -16.346217,
+            "gpstime": 1755200325,
+            "speed": 1,
+            "course": 47,
+            "datetime": "2025-08-14 14:38:45"
+        },
+        {
+            "longitude": -71.547112,
+            "latitude": -16.346243,
+            "gpstime": 1755200336,
+            "speed": 2,
+            "course": 47,
+            "datetime": "2025-08-14 14:38:56"
+        },
+        {
+            "longitude": -71.547144,
+            "latitude": -16.346292,
+            "gpstime": 1755200346,
+            "speed": 2,
+            "course": 47,
+            "datetime": "2025-08-14 14:39:06"
+        },
+        {
+            "longitude": -71.547145,
+            "latitude": -16.346319,
+            "gpstime": 1755200356,
+            "speed": 0,
+            "course": 47,
+            "datetime": "2025-08-14 14:39:16"
+        },
+        {
+            "longitude": -71.54715,
+            "latitude": -16.346279,
+            "gpstime": 1755200367,
+            "speed": 3,
+            "course": 47,
+            "datetime": "2025-08-14 14:39:27"
+        },
+        {
+            "longitude": -71.547152,
+            "latitude": -16.346265,
+            "gpstime": 1755200377,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:39:37"
+        },
+        {
+            "longitude": -71.547146,
+            "latitude": -16.346272,
+            "gpstime": 1755200387,
+            "speed": 3,
+            "course": 342,
+            "datetime": "2025-08-14 14:39:47"
+        },
+        {
+            "longitude": -71.547141,
+            "latitude": -16.346271,
+            "gpstime": 1755200398,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:39:58"
+        },
+        {
+            "longitude": -71.547128,
+            "latitude": -16.346291,
+            "gpstime": 1755200408,
+            "speed": 2,
+            "course": 342,
+            "datetime": "2025-08-14 14:40:08"
+        },
+        {
+            "longitude": -71.54714,
+            "latitude": -16.346292,
+            "gpstime": 1755200419,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:40:19"
+        },
+        {
+            "longitude": -71.547144,
+            "latitude": -16.346278,
+            "gpstime": 1755200430,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:40:30"
+        },
+        {
+            "longitude": -71.547127,
+            "latitude": -16.346294,
+            "gpstime": 1755200440,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:40:40"
+        },
+        {
+            "longitude": -71.547145,
+            "latitude": -16.346325,
+            "gpstime": 1755200450,
+            "speed": 3,
+            "course": 342,
+            "datetime": "2025-08-14 14:40:50"
+        },
+        {
+            "longitude": -71.547147,
+            "latitude": -16.346338,
+            "gpstime": 1755200460,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:41:00"
+        },
+        {
+            "longitude": -71.547151,
+            "latitude": -16.346308,
+            "gpstime": 1755200476,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:41:16"
+        },
+        {
+            "longitude": -71.547127,
+            "latitude": -16.346338,
+            "gpstime": 1755200488,
+            "speed": 1,
+            "course": 342,
+            "datetime": "2025-08-14 14:41:28"
+        },
+        {
+            "longitude": -71.547126,
+            "latitude": -16.346315,
+            "gpstime": 1755200498,
+            "speed": 1,
+            "course": 342,
+            "datetime": "2025-08-14 14:41:38"
+        },
+        {
+            "longitude": -71.547135,
+            "latitude": -16.34632,
+            "gpstime": 1755200508,
+            "speed": 0,
+            "course": 342,
+            "datetime": "2025-08-14 14:41:48"
+        }
+    ],
+    "code": 0,
+    "total": 538
+}

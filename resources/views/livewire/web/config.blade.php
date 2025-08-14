@@ -130,6 +130,10 @@
                                                 </th>
                                             @endforeach
 
+                                            <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                                <div class="font-semibold text-left">Acciones</div>
+                                            </th>
+
                                         </tr>
                                     </thead>
 
@@ -205,6 +209,27 @@
                                                         </div>
                                                     </td>
                                                 @endforeach
+
+                                                <!-- Acciones -->
+                                                <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                                    <div class="flex items-center space-x-2">
+                                                        @if (isset($unit->services['osinergmin']) && $unit->services['osinergmin']['active'])
+                                                            <button type="button"
+                                                                wire:click="$dispatch('openReenvioModal', { deviceId: {{ $unit->id }} })"
+                                                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                                                <svg class="w-3 h-3 mr-1" fill="none"
+                                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-width="2"
+                                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                                                                    </path>
+                                                                </svg>
+                                                                Reenviar
+                                                            </button>
+                                                        @endif
+                                                    </div>
+                                                </td>
                                             </tr>
                                         @endforeach
 
@@ -310,6 +335,8 @@
 
     </div>
 
+    <!-- Modal de reenvío de historial -->
+    @livewire('web.reenvio-historial-modal')
 
 </div>
 

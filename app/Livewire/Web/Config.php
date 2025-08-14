@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\Devices;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\On;
 use Illuminate\Support\Collection;
 use App\Models\Config as ConfigApp;
 use Illuminate\Support\Facades\Redis;
@@ -238,5 +239,11 @@ class Config extends Component
     {
 
         $this->dispatch('openModalReenvio');
+    }
+
+    #[On('openReenvioModal')]
+    public function openReenvioModal($deviceId)
+    {
+        $this->dispatch('openReenvioModalDevice', deviceId: $deviceId);
     }
 }

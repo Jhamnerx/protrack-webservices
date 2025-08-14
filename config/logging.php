@@ -144,6 +144,14 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'data_quality' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/data_quality/data_quality.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 7,
+            'replace_placeholders' => true,
+        ],
+
     ],
 
 ];

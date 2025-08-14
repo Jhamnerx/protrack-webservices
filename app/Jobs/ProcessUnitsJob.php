@@ -38,9 +38,11 @@ class ProcessUnitsJob implements ShouldQueue
                 ->orWhere('services->osinergmin->active', true);
         })->get();
 
-        $sutranDevices = $this->filterSutranDevices($devices);
 
-        $combinedDevices = array_unique(array_merge($sutranDevices));
+        $sutranDevices = $this->filterSutranDevices($devices);
+        $osinergminDevices = $this->filterOsinergminDevices($devices);
+
+        $combinedDevices = array_unique(array_merge($sutranDevices, $osinergminDevices));
 
         $protrackService = new ProtrackApiService();
 

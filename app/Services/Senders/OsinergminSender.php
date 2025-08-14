@@ -93,7 +93,7 @@ class OsinergminSender implements UnitSenderInterface
                 }
 
                 if (isset($trama['plate']) && isset($trama['imei'])) {
-                    Log::error("Error en envío a Osinergmin para placa: {$trama['plate']}, IMEI: {$trama['imei']}");
+                    Log::channel('osinergmin')->error("Error en envío a Osinergmin para placa: {$trama['plate']}, IMEI: {$trama['imei']}");
                 }
             }
         }
