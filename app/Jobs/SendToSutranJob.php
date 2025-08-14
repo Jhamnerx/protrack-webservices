@@ -20,7 +20,7 @@ class SendToSutranJob implements ShouldQueue
     public function __construct(array $units)
     {
         $this->units = $units;
-        $this->onQueue('web-services');
+        $this->onQueue('web-services-sutran');
     }
 
     public function handle()

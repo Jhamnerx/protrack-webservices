@@ -22,7 +22,7 @@ class SendToOsinergminJob implements ShouldQueue
     public function __construct(array $units)
     {
         $this->units = $units;
-        $this->onQueue('web-services');
+        $this->onQueue('web-services-osinergmin');
     }
 
     public function handle()
