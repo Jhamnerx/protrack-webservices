@@ -72,8 +72,7 @@ final class Tabla extends PowerGridComponent
             Column::make('Servicio Web', 'service_name')
                 ->sortable()
                 ->searchable(),
-            Column::make('Fecha/Hora enviado', 'fecha_hora_enviado')
-                ->searchable(),
+            Column::make('Fecha/Hora enviado', 'fecha_hora_enviado'),
 
             Column::make('Fecha/Hora posición', 'fecha_hora_posicion')
                 ->sortable()

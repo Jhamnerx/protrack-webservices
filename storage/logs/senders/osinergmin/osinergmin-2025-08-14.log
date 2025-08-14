@@ -1,0 +1,5 @@
+[2025-08-14 09:56:27] local.INFO: Iniciando envío de batch {"total_tramas":1,"url":"https://prod.osinergmin-agent-2021.com/api/v1/trama","timestamp":"2025-08-14 09:56:27"} 
+[2025-08-14 09:56:28] local.ERROR: Error al enviar trama {"plate":"A0M-786","imei":865190070386456,"event":"none","error":"Client error: `POST https://prod.osinergmin-agent-2021.com/api/v1/trama` resulted in a `400 Bad Request` response:
+{\"timestamp\":\"2025-08-14T14:56:16.785+00:00\",\"message\":\"el valor del campo plate (A0M-786) no existe en nuestro sistema\" (truncated...)
+","trama":{"id":1,"event":"none","gpsDate":"2025-08-14T14:54:43.000Z","plate":"A0M-786","speed":0,"position":{"latitude":-16.397279,"longitude":-71.52287,"altitude":0.0},"tokenTrama":"F0B93A86-6B60-412A-8ACD-4BBD64852793","odometer":-1.0,"imei":865190070386456,"idTrama":1755183283}} 
+[2025-08-14 09:56:28] local.INFO: Batch completado {"total_sent":1,"success_count":0,"failed_count":1,"success_rate":"0%","timestamp":"2025-08-14 09:56:28"} 

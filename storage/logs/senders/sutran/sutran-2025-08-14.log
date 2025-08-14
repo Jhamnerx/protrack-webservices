@@ -1,0 +1,4 @@
+[2025-08-14 09:56:27] local.INFO: Iniciando envío de batch {"total_tramas":1,"url":"https://ws03.sutran.ehg.pe/api/v1.0/transmisiones","token":"e2c3ddd2...","timestamp":"2025-08-14 09:56:27"} 
+[2025-08-14 09:56:27] local.INFO: Respuesta recibida de Sutran {"response":{"menssage":"Registrado (1/1)","status":200},"token":"e2c3ddd2..."} 
+[2025-08-14 09:56:27] local.INFO: Todas las tramas procesadas exitosamente {"total_tramas":1,"response_status":200} 
+[2025-08-14 09:56:27] local.INFO: Batch completado {"total_sent":1,"success_count":1,"failed_count":0,"success_rate":"100%","timestamp":"2025-08-14 09:56:27"} 

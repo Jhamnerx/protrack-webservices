@@ -20,6 +20,7 @@ class OsinergminSender implements UnitSenderInterface
     protected $config;
     protected $client;
     protected $maxConcurrentRequests = 5;
+    protected $senderName = 'Osinergmin';
 
     public function __construct()
     {
@@ -38,6 +39,13 @@ class OsinergminSender implements UnitSenderInterface
             Log::info('No hay tramas para enviar a Osinergmin');
             return;
         }
+
+        // Log inicio del batch siempre
+        Log::channel('osinergmin')->info('Iniciando envío de batch', [
+            'total_tramas' => count($tramas),
+            'url' => $url,
+            'timestamp' => now()->toDateTimeString()
+        ]);
 
         // Verificar si debemos usar el método optimizado por lotes
         if (count($tramas) > 10) {
@@ -71,6 +79,15 @@ class OsinergminSender implements UnitSenderInterface
 
                 Log::error("Error en envío a Osinergmin: " . $e->getMessage());
 
+                // Log del error siempre
+                Log::channel('osinergmin')->error('Error al enviar trama', [
+                    'plate' => $trama['plate'] ?? 'N/A',
+                    'imei' => $trama['imei'] ?? 'N/A',
+                    'event' => $trama['event'] ?? 'N/A',
+                    'error' => $e->getMessage(),
+                    'trama' => $trama
+                ]);
+
                 if ($this->config->servicios['osinergmin']['enabled_logs']) {
                     $this->logError($e, $trama);
                 }
@@ -80,6 +97,15 @@ class OsinergminSender implements UnitSenderInterface
                 }
             }
         }
+
+        // Log finalización del batch siempre
+        Log::channel('osinergmin')->info('Batch completado', [
+            'total_sent' => count($tramas),
+            'success_count' => $successCount,
+            'failed_count' => $failedCount,
+            'success_rate' => count($tramas) > 0 ? round(($successCount / count($tramas)) * 100, 2) . '%' : '0%',
+            'timestamp' => now()->toDateTimeString()
+        ]);
 
         // Actualizar contadores globales después de procesar todas las tramas
         $this->updateCounterService($successCount, $failedCount, count($tramas));
@@ -129,6 +155,15 @@ class OsinergminSender implements UnitSenderInterface
                     $trama = $chunk[$index];
 
                     if ($reason instanceof RequestException) {
+                        // Log del error siempre
+                        Log::channel('osinergmin')->error('Error al enviar trama en batch', [
+                            'plate' => $trama['plate'] ?? 'N/A',
+                            'imei' => $trama['imei'] ?? 'N/A',
+                            'event' => $trama['event'] ?? 'N/A',
+                            'error' => $reason->getMessage(),
+                            'trama' => $trama
+                        ]);
+
                         if ($this->config->servicios['osinergmin']['enabled_logs']) {
                             $this->logError($reason, $trama);
                         }
@@ -141,27 +176,43 @@ class OsinergminSender implements UnitSenderInterface
             $promise->wait();
         }
 
+        // Log finalización del batch siempre
+        Log::channel('osinergmin')->info('Batch completado', [
+            'total_sent' => count($tramas),
+            'success_count' => $successCount,
+            'failed_count' => $failedCount,
+            'success_rate' => count($tramas) > 0 ? round(($successCount / count($tramas)) * 100, 2) . '%' : '0%',
+            'timestamp' => now()->toDateTimeString()
+        ]);
+
         // Actualizar contadores globales después de procesar todas las tramas
         $this->updateCounterService($successCount, $failedCount, count($tramas));
     }
 
     protected function handleSuccess(array $response, array $trama): void
     {
+        // Log de éxito siempre
+        Log::channel('osinergmin')->info('Trama enviada exitosamente', [
+            'plate' => $trama['plate'] ?? 'N/A',
+            'imei' => $trama['imei'] ?? 'N/A',
+            'event' => $trama['event'] ?? 'N/A',
+            'trama' => $trama,
+            'response' => $response
+        ]);
+
         if ($this->config->servicios['osinergmin']['enabled_logs'] ?? true) {
-            // Solo logueamos si está habilitado y no está activo log_only_errors
-            if (!($this->config->servicios['osinergmin']['log_only_errors'] ?? false)) {
-                $this->logService->logToDatabase(
-                    '',
-                    'Osinergmin',
-                    $trama['plate'],
-                    'success',
-                    $trama,
-                    ['message' => $response],
-                    [],
-                    Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
-                    $trama['imei']
-                );
-            }
+
+            $this->logService->logToDatabase(
+                '',
+                'Osinergmin',
+                $trama['plate'],
+                'success',
+                $trama,
+                ['message' => $response],
+                [],
+                Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
+                $trama['imei']
+            );
         }
 
         try {
@@ -182,6 +233,18 @@ class OsinergminSender implements UnitSenderInterface
 
     protected function handleError(array $response, array $trama): void
     {
+        $errorMessage = $response['message'] . ' - ' . ($response['suggestion'] ?? 'No suggestion');
+
+        // Log de error siempre
+        Log::channel('osinergmin')->error('Error al enviar trama', [
+            'plate' => $trama['plate'] ?? 'N/A',
+            'imei' => $trama['imei'] ?? 'N/A',
+            'event' => $trama['event'] ?? 'N/A',
+            'error' => $errorMessage,
+            'trama' => $trama,
+            'response' => $response
+        ]);
+
         if ($this->config->servicios['osinergmin']['enabled_logs']) {
             $this->logService->logToDatabase(
                 '',

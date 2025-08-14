@@ -7,6 +7,7 @@ use App\Models\Devices;
 use GuzzleHttp\Client;
 use App\Services\LogService;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use GuzzleHttp\Exception\RequestException;
 
 
@@ -26,6 +27,14 @@ class SutranSender implements UnitSenderInterface
     {
         $token = $this->config->servicios['sutran']['token'];
 
+        // Log inicio del envío siempre
+        Log::channel('sutran')->info('Iniciando envío de batch', [
+            'total_tramas' => count($tramas),
+            'url' => $url,
+            'token' => substr($token, 0, 8) . '...', // Log parcial del token por seguridad
+            'timestamp' => now()->toDateTimeString()
+        ]);
+
         try {
             $client = new Client(['verify' => false]);
             $response = $client->request('POST', $url, [
@@ -37,13 +46,33 @@ class SutranSender implements UnitSenderInterface
             ]);
 
             $responseSutran = $response->getBody()->getContents();
+            $responseData = json_decode($responseSutran, true);
 
-            $this->actionAfterSend($tramas, json_decode($responseSutran, true));
+            // Log de respuesta exitosa siempre
+            Log::channel('sutran')->info('Respuesta recibida de Sutran', [
+                'response' => $responseData,
+                'token' => substr($token, 0, 8) . '...'
+            ]);
+
+            $this->actionAfterSend($tramas, $responseData);
         } catch (RequestException $e) {
+            // Log de error siempre
+            Log::channel('sutran')->error('Error en conexión con Sutran', [
+                'error' => $e->getMessage(),
+                'token' => substr($token, 0, 8) . '...',
+                'tramas_count' => count($tramas)
+            ]);
+
             if ($e->hasResponse()) {
 
                 $response = $e->getResponse();
                 $body = $response->getBody()->getContents();
+
+                // Log detallado del error siempre
+                Log::channel('sutran')->error('Respuesta de error de Sutran', [
+                    'response_body' => $body,
+                    'status_code' => $response->getStatusCode()
+                ]);
 
                 // Guardar log de error en la base de datos
                 $this->logService->logToDatabase(
@@ -58,6 +87,15 @@ class SutranSender implements UnitSenderInterface
                     null
                 );
             }
+
+            // Log finalización con error
+            Log::channel('sutran')->info('Batch completado con error', [
+                'total_sent' => count($tramas),
+                'success_count' => 0,
+                'failed_count' => count($tramas),
+                'success_rate' => '0%',
+                'timestamp' => now()->toDateTimeString()
+            ]);
         }
     }
 
@@ -70,6 +108,12 @@ class SutranSender implements UnitSenderInterface
 
         if ($response['status'] == 200 && empty($response['error_plates'])) {
             $successCount = $totalSent;
+
+            // Log de éxito para todas las tramas siempre
+            Log::channel('sutran')->info('Todas las tramas procesadas exitosamente', [
+                'total_tramas' => $totalSent,
+                'response_status' => $response['status']
+            ]);
 
             if ($this->config->servicios['sutran']['enabled_logs']) {
                 foreach ($tramas as $trama) {
@@ -105,9 +149,25 @@ class SutranSender implements UnitSenderInterface
                 }
             }
 
+            // Log de procesamiento con errores parciales siempre
+            Log::channel('sutran')->warning('Procesamiento con errores parciales', [
+                'total_tramas' => $totalSent,
+                'error_plates' => $response['error_plates'],
+                'errored_rows' => $errored_rows
+            ]);
+
             foreach ($tramas as $index => $trama) {
                 if (array_key_exists($index, $errored_rows)) {
                     $errorCount++;
+
+                    // Log de error individual siempre
+                    Log::channel('sutran')->error('Error al procesar trama', [
+                        'plate' => $trama['plate'] ?? 'N/A',
+                        'imei' => $trama['imei'] ?? 'N/A',
+                        'event' => $trama['event'] ?? 'N/A',
+                        'error' => $errored_rows[$index],
+                        'trama' => $trama
+                    ]);
 
                     if ($this->config->servicios['sutran']['enabled_logs']) {
 
@@ -126,6 +186,13 @@ class SutranSender implements UnitSenderInterface
                 } else {
                     $successCount++;
 
+                    // Log de éxito individual siempre
+                    Log::channel('sutran')->info('Trama procesada exitosamente', [
+                        'plate' => $trama['plate'] ?? 'N/A',
+                        'imei' => $trama['imei'] ?? 'N/A',
+                        'event' => $trama['event'] ?? 'N/A',
+                        'trama' => $trama
+                    ]);
 
                     if ($this->config->servicios['sutran']['enabled_logs']) {
 
@@ -142,7 +209,7 @@ class SutranSender implements UnitSenderInterface
                         );
                     }
 
-                    Devices::where('imei', $trama['id'])->first()->update([
+                    Devices::where('imei', $trama['imei'])->first()->update([
                         'last_status' => $trama['event'],
                         'last_position' => $trama['geo'],
                         'last_update' => $trama['time_device'],
@@ -152,6 +219,14 @@ class SutranSender implements UnitSenderInterface
             }
         }
 
+        // Log finalización del batch siempre
+        Log::channel('sutran')->info('Batch completado', [
+            'total_sent' => $totalSent,
+            'success_count' => $successCount,
+            'failed_count' => $errorCount,
+            'success_rate' => $totalSent > 0 ? round(($successCount / $totalSent) * 100, 2) . '%' : '0%',
+            'timestamp' => now()->toDateTimeString()
+        ]);
 
         DB::transaction(function () use ($totalSent, $successCount, $errorCount) {
             $counterService = $this->config->counterServices()->firstOrCreate(
