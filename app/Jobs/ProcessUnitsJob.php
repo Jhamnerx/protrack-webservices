@@ -53,10 +53,7 @@ class ProcessUnitsJob implements ShouldQueue
 
             $imeis = implode(',', array_map('intval', array_values($chunk)));
 
-
             $partialResult = $protrackService->fetchDeviceLocation($chunk);
-
-            // Log::info('result:' . json_encode($partialResult));
 
             $result = array_merge($result, $partialResult);
         }
@@ -69,8 +66,6 @@ class ProcessUnitsJob implements ShouldQueue
 
         $processor = new Processor();
         $processedUnits = $processor->processUnits($result);
-
-        Log::info('processedUnits:' . json_encode($processedUnits));
 
         if ($config->servicios['sutran']['status'])
             if (!empty($processedUnits['sutran']) && $config->servicios['sutran']['status']) {
