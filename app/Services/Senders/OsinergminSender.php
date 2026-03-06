@@ -67,7 +67,13 @@ class OsinergminSender implements UnitSenderInterface
 
                 $responseBody = json_decode($response->getBody()->getContents(), true);
 
-                if ($responseBody['status'] === 'CREATED') {
+                Log::channel('osinergmin')->debug('Respuesta de Osinergmin', [
+                    'plate' => $trama['plate'] ?? 'N/A',
+                    'imei' => $trama['imei'] ?? 'N/A',
+                    'response' => $responseBody,
+                ]);
+
+                if (isset($responseBody['status']) && $responseBody['status'] === 'CREATED') {
                     $successCount++;
                     $this->handleSuccess($responseBody, $trama);
                 } else {
@@ -77,24 +83,32 @@ class OsinergminSender implements UnitSenderInterface
             } catch (RequestException $e) {
                 $failedCount++;
 
-                Log::error("Error en envío a Osinergmin: " . $e->getMessage());
+                $errorResponse = null;
+                if ($e->hasResponse()) {
+                    $errorResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
+                }
 
-                // Log del error siempre
                 Log::channel('osinergmin')->error('Error al enviar trama', [
                     'plate' => $trama['plate'] ?? 'N/A',
                     'imei' => $trama['imei'] ?? 'N/A',
                     'event' => $trama['event'] ?? 'N/A',
                     'error' => $e->getMessage(),
+                    'api_response' => $errorResponse,
                     'trama' => $trama
                 ]);
 
                 if ($this->config->servicios['osinergmin']['enabled_logs']) {
                     $this->logError($e, $trama);
                 }
+            } catch (\Exception $e) {
+                $failedCount++;
 
-                if (isset($trama['plate']) && isset($trama['imei'])) {
-                    Log::channel('osinergmin')->error("Error en envío a Osinergmin para placa: {$trama['plate']}, IMEI: {$trama['imei']}");
-                }
+                Log::channel('osinergmin')->error('Error inesperado al enviar trama', [
+                    'plate' => $trama['plate'] ?? 'N/A',
+                    'imei' => $trama['imei'] ?? 'N/A',
+                    'error' => $e->getMessage(),
+                    'trama' => $trama
+                ]);
             }
         }
 
@@ -139,34 +153,52 @@ class OsinergminSender implements UnitSenderInterface
 
             $pool = new Pool($this->client, $requests($chunk), [
                 'concurrency' => $this->maxConcurrentRequests,
-                'fulfilled' => function (ResponseInterface $response, $index) use ($chunk, &$successCount) {
-                    $responseBody = json_decode($response->getBody()->getContents(), true);
-                    $trama = $chunk[$index];
+                'fulfilled' => function (ResponseInterface $response, $index) use ($chunk, &$successCount, &$failedCount) {
+                    try {
+                        $responseBody = json_decode($response->getBody()->getContents(), true);
+                        $trama = $chunk[$index];
 
-                    if ($responseBody['status'] === 'CREATED') {
-                        $successCount++;
-                        $this->handleSuccess($responseBody, $trama);
-                    } else {
-                        $this->handleError($responseBody, $trama);
+                        Log::channel('osinergmin')->debug('Respuesta de Osinergmin (batch)', [
+                            'plate' => $trama['plate'] ?? 'N/A',
+                            'imei' => $trama['imei'] ?? 'N/A',
+                            'response' => $responseBody,
+                        ]);
+
+                        if (isset($responseBody['status']) && $responseBody['status'] === 'CREATED') {
+                            $successCount++;
+                            $this->handleSuccess($responseBody, $trama);
+                        } else {
+                            $failedCount++;
+                            $this->handleError($responseBody, $trama);
+                        }
+                    } catch (\Exception $e) {
+                        $failedCount++;
+                        Log::channel('osinergmin')->error('Error procesando respuesta en batch', [
+                            'error' => $e->getMessage(),
+                            'trama' => $chunk[$index] ?? null,
+                        ]);
                     }
                 },
                 'rejected' => function ($reason, $index) use ($chunk, &$failedCount) {
                     $failedCount++;
                     $trama = $chunk[$index];
 
-                    if ($reason instanceof RequestException) {
-                        // Log del error siempre
-                        Log::channel('osinergmin')->error('Error al enviar trama en batch', [
-                            'plate' => $trama['plate'] ?? 'N/A',
-                            'imei' => $trama['imei'] ?? 'N/A',
-                            'event' => $trama['event'] ?? 'N/A',
-                            'error' => $reason->getMessage(),
-                            'trama' => $trama
-                        ]);
+                    $errorResponse = null;
+                    if ($reason instanceof RequestException && $reason->hasResponse()) {
+                        $errorResponse = json_decode($reason->getResponse()->getBody()->getContents(), true);
+                    }
 
-                        if ($this->config->servicios['osinergmin']['enabled_logs']) {
-                            $this->logError($reason, $trama);
-                        }
+                    Log::channel('osinergmin')->error('Error al enviar trama en batch', [
+                        'plate' => $trama['plate'] ?? 'N/A',
+                        'imei' => $trama['imei'] ?? 'N/A',
+                        'event' => $trama['event'] ?? 'N/A',
+                        'error' => $reason instanceof \Exception ? $reason->getMessage() : (string) $reason,
+                        'api_response' => $errorResponse,
+                        'trama' => $trama
+                    ]);
+
+                    if ($reason instanceof RequestException && $this->config->servicios['osinergmin']['enabled_logs']) {
+                        $this->logError($reason, $trama);
                     }
                 }
             ]);
@@ -231,12 +263,12 @@ class OsinergminSender implements UnitSenderInterface
         }
     }
 
-    protected function handleError(array $response, array $trama): void
+    protected function handleError(?array $response, array $trama): void
     {
-        $errorMessage = $response['message'] . ' - ' . ($response['suggestion'] ?? 'No suggestion');
+        $errorMessage = ($response['message'] ?? 'Sin mensaje') . ' - ' . ($response['suggestion'] ?? 'Sin sugerencia');
 
         // Log de error siempre
-        Log::channel('osinergmin')->error('Error al enviar trama', [
+        Log::channel('osinergmin')->error('Error respuesta de Osinergmin', [
             'plate' => $trama['plate'] ?? 'N/A',
             'imei' => $trama['imei'] ?? 'N/A',
             'event' => $trama['event'] ?? 'N/A',
@@ -250,9 +282,9 @@ class OsinergminSender implements UnitSenderInterface
                 '',
                 'Osinergmin',
                 $trama['plate'],
-                'error',
+                $response['status'] ?? 'error',
                 $trama,
-                ['message' => $response['message'] . ' - ' . ($response['suggestion'] ?? 'No suggestion')],
+                ['message' => $errorMessage],
                 [],
                 Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
                 $trama['imei']

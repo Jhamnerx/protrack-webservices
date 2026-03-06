@@ -1,6 +1,7 @@
 <?php
 
 use App\Jobs\CheckDevicesExists;
+use App\Jobs\ClearQueues;
 use Laravel\Prompts\Clear;
 use Illuminate\Http\Request;
 use App\Jobs\ClearLogs;
@@ -35,5 +36,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $schedule->command('api:get')->everyThirtySeconds()->runInBackground();
         $schedule->command('protrack:refresh-token')->hourly()->runInBackground();
         $schedule->job(new ClearLogs(3))->daily();
+
+        // Limpiar colas todos los días a las 8:00 PM
+        $schedule->job(new ClearQueues())->dailyAt('20:00');
     })
     ->withExceptions(function (Exceptions $exceptions) {})->create();

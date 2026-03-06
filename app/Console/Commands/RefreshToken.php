@@ -23,9 +23,9 @@ class RefreshToken extends Command
         while ($attempt < $maxAttempts) {
             try {
                 $attempt++;
-                // Obtiene el access token
-                $token = $protrackApiService->getAccessToken();
-                $this->info("Access token obtenido y almacenado en caché: {$token}");
+                // Fuerza la renovación del token eliminando el caché actual
+                $token = $protrackApiService->getAccessToken(forceRefresh: true);
+                $this->info("Access token renovado y almacenado en caché: {$token}");
                 return 0; // Éxito
             } catch (\Exception $e) {
                 $this->error("Intento {$attempt}: Error al obtener el access token: {$e->getMessage()}");

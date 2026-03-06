@@ -75,7 +75,7 @@ class ReenviarHistorial implements ShouldQueue
         }
 
         $tramas = $this->format($posiciones);
-        $url = "https://prod.osinergmin-agent-2021.com/api/v1/trama";
+        $url = "https://thunder.osinergmin-agent-2021.com/api/v1/trama";
 
         $sender = new OsinergminSender();
         $sender->send($tramas, $url);

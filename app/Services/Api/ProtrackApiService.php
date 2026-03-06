@@ -25,10 +25,15 @@ class ProtrackApiService
      * @return string
      * @throws \Exception
      */
-    public function getAccessToken(): string
+    public function getAccessToken(bool $forceRefresh = false): string
     {
 
         $cacheKey = 'protrack_api_access_token';
+
+        if ($forceRefresh) {
+            Cache::forget($cacheKey);
+        }
+
         if (Cache::has($cacheKey)) {
             return Cache::get($cacheKey);
         }
@@ -42,6 +47,10 @@ class ProtrackApiService
         }
 
         $authResponse = $auth->getAccessToken($config->cuenta, $config->clave);
+
+        if (isset($authResponse['code']) && $authResponse['code'] !== 0) {
+            throw new \Exception($authResponse['message'] ?? 'Error al obtener el access token: código ' . $authResponse['code']);
+        }
 
         if (!isset($authResponse['record']['access_token'])) {
             throw new \Exception('No se pudo obtener el access token');
@@ -70,7 +79,7 @@ class ProtrackApiService
         $response = $apiDevice->listDevices($accessToken);
 
         if ($response['code'] !== 0) {
-            throw new \Exception('Error al obtener dispositivos de la API');
+            throw new \Exception($response['message'] ?? 'Error al obtener dispositivos de la API');
         }
 
         return $response['record'] ?? [];
@@ -91,7 +100,7 @@ class ProtrackApiService
         $response = $apiDevice->getDeviceDetails($accessToken, $imeis);
 
         if ($response['code'] !== 0) {
-            throw new \Exception('Error al obtener el estado de los dispositivos de la API');
+            throw new \Exception($response['message'] ?? 'Error al obtener el estado de los dispositivos de la API');
         }
 
         return $response['record'] ?? [];
@@ -112,7 +121,7 @@ class ProtrackApiService
         $response = $apiDevice->trackDevices($accessToken, $imeis);
 
         if ($response['code'] !== 0) {
-            throw new \Exception('Error al obtener la ubicación de los dispositivos de la API');
+            throw new \Exception($response['message'] ?? 'Error al obtener la ubicación de los dispositivos de la API');
         }
 
         return $response['record'] ?? [];
@@ -153,7 +162,7 @@ class ProtrackApiService
             $lastCode = $response['code'];
 
             if ($response['code'] !== 0) {
-                throw new \Exception('Error en la API de playback: código ' . $response['code']);
+                throw new \Exception($response['message'] ?? 'Error en la API de playback: código ' . $response['code']);
             }
 
             if (empty($response['record'])) {
