@@ -84,9 +84,9 @@ class ReenvioHistorialModal extends Component
         }
 
         try {
-            // Convertir fechas a zona horaria de Lima
-            $startDateTime = Carbon::createFromFormat('Y-m-d H:i', $this->startDate, 'America/Lima');
-            $endDateTime = Carbon::createFromFormat('Y-m-d H:i', $this->endDate, 'America/Lima');
+            // Convertir fechas a zona horaria de Lima (soporta tanto 'Y-m-d H:i' como 'Y-m-d\TH:i')
+            $startDateTime = Carbon::parse($this->startDate, 'America/Lima');
+            $endDateTime = Carbon::parse($this->endDate, 'America/Lima');
 
             // Validar que el rango no sea mayor a 30 días
             if ($startDateTime->diffInDays($endDateTime) > 30) {

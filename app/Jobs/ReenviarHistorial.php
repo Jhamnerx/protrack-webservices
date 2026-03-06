@@ -76,7 +76,7 @@ class ReenviarHistorial implements ShouldQueue
 
         $tramas = $this->format($posiciones);
         $url = "https://thunder.osinergmin-agent-2021.com/api/v1/trama";
-
+        Log::info("Enviando " . count($tramas) . " tramas de historial para dispositivo {$this->deviceImei} a Osinergmin");
         $sender = new OsinergminSender();
         $sender->send($tramas, $url);
 
