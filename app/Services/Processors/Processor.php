@@ -65,11 +65,11 @@ class Processor implements UnitProcessorInterface
                             Log::info("Diferencia de tiempo detectada: {$timeDifference} minutos para dispositivo {$device->imei}. Disparando job ReenviarHistorial.");
 
                             // Disparar el job con begintime desde la última actualización y endtime el tiempo actual
-                            ReenviarHistorial::dispatch(
-                                $device->imei, // Usar IMEI en lugar de ID
-                                $deviceLastUpdate->format('Y-m-d H:i:s'),
-                                $now->format('Y-m-d H:i:s')
-                            );
+                            // ReenviarHistorial::dispatch(
+                            //     $device->imei, // Usar IMEI en lugar de ID
+                            //     $deviceLastUpdate->format('Y-m-d H:i:s'),
+                            //     $now->format('Y-m-d H:i:s')
+                            // );
                         }
                     }
 
