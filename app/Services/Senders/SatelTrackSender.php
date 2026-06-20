@@ -106,7 +106,7 @@ class SatelTrackSender implements UnitSenderInterface
             if ($this->config->servicios['sateltrack']['enabled_logs'] ?? false) {
                 $this->logService->logToDatabase(
                     '',
-                    'SatelTrack',
+                    'Tracklog',
                     'N/A',
                     'error',
                     $items,
@@ -157,7 +157,7 @@ class SatelTrackSender implements UnitSenderInterface
                 if ($enabledLogs) {
                     $this->logService->logToDatabase(
                         '',
-                        'SatelTrack',
+                        'Tracklog',
                         $trama['placa'],
                         'success',
                         $this->wireTrama($trama),
@@ -181,7 +181,7 @@ class SatelTrackSender implements UnitSenderInterface
                 if ($enabledLogs) {
                     $this->logService->logToDatabase(
                         '',
-                        'SatelTrack',
+                        'Tracklog',
                         $trama['placa'],
                         'error',
                         $this->wireTrama($trama),
