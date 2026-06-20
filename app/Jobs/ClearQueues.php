@@ -32,6 +32,8 @@ class ClearQueues implements ShouldQueue
             $queues = [
                 'web-services',
                 'web-services-sutran',
+                'web-services-osinergmin',
+                'web-services-sateltrack',
                 'reenviar-historial',
                 'default'
             ];

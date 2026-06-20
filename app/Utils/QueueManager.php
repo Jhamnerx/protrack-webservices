@@ -17,6 +17,22 @@ class QueueManager
     }
 
     /**
+     * Limpiar cola de servicios web Osinergmin
+     */
+    public static function clearOsinergminQueue(): string
+    {
+        return ClearQueues::clearSpecificQueue('web-services-osinergmin');
+    }
+
+    /**
+     * Limpiar cola de servicios web SatelTrack
+     */
+    public static function clearSatelTrackQueue(): string
+    {
+        return ClearQueues::clearSpecificQueue('web-services-sateltrack');
+    }
+
+    /**
      * Limpiar cola de servicios web general
      */
     public static function clearWebServicesQueue(): string

@@ -202,6 +202,121 @@ class ProtrackApiService
     }
 
     /**
+     * Consulta la API de alarmas (/api/alarm/list) para un dispositivo y rango de tiempo.
+     *
+     * Respuesta cruda: registros separados por ';', cada uno con campos separados por ','
+     * en el orden: alarmType, longitude, latitude, gpstime, systemtime, speed, course, geofenceId.
+     * Máximo 100 registros por petición; se pagina usando el systemtime del último registro.
+     *
+     * @return array{records: array, code: int|null, total: int}
+     * @throws \Exception
+     */
+    public function fetchAlarms(string $imei, int $beginTime, int $endTime): array
+    {
+        $accessToken = $this->getAccessToken();
+        $allRecords = [];
+        $totalRecords = 0;
+        $currentBeginTime = $beginTime;
+        $lastCode = null;
+
+        do {
+            $url = "{$this->baseUri}/api/alarm/list";
+            $params = [
+                'access_token' => $accessToken,
+                'imei' => $imei,
+                'begintime' => $currentBeginTime,
+                'endtime' => $endTime,
+            ];
+
+            $response = $this->makeHttpRequest($url, $params);
+
+            if (!$response || !isset($response['code'])) {
+                throw new \Exception('Respuesta inválida de la API de alarmas');
+            }
+
+            $lastCode = $response['code'];
+
+            if ($response['code'] !== 0) {
+                throw new \Exception($response['message'] ?? 'Error en la API de alarmas: código ' . $response['code']);
+            }
+
+            if (empty($response['record'])) {
+                break;
+            }
+
+            $records = $this->parseAlarmRecords($response['record']);
+            $recordCount = count($records);
+            $totalRecords += $recordCount;
+
+            $allRecords = array_merge($allRecords, $records);
+
+            // Si obtuvimos menos de 100 registros, hemos terminado.
+            if ($recordCount < 100) {
+                break;
+            }
+
+            // Para la siguiente página usar el systemtime del último registro como begintime.
+            $lastRecord = end($records);
+            $nextBeginTime = $lastRecord['systemtime'];
+
+            // Prevenir bucle infinito si el cursor no avanza.
+            if ($nextBeginTime <= $currentBeginTime) {
+                break;
+            }
+
+            $currentBeginTime = $nextBeginTime;
+
+            if ($currentBeginTime >= $endTime) {
+                break;
+            }
+        } while (true);
+
+        return [
+            'records' => $allRecords,
+            'code' => $lastCode,
+            'total' => $totalRecords,
+        ];
+    }
+
+    /**
+     * Procesa la cadena de alarmas (formato CSV separado por ';') a un array estructurado.
+     *
+     * @return array
+     */
+    private function parseAlarmRecords(string $recordString): array
+    {
+        if (empty($recordString)) {
+            return [];
+        }
+
+        $records = [];
+        $recordGroups = explode(';', $recordString);
+
+        foreach ($recordGroups as $group) {
+            if (empty(trim($group))) {
+                continue;
+            }
+
+            $data = explode(',', $group);
+
+            if (count($data) >= 7) {
+                $records[] = [
+                    'alarmType' => (int) $data[0],
+                    'longitude' => (float) $data[1],
+                    'latitude' => (float) $data[2],
+                    'gpstime' => (int) $data[3],
+                    'systemtime' => (int) $data[4],
+                    'speed' => (int) $data[5],
+                    'course' => (int) $data[6],
+                    'geofenceId' => $data[7] ?? null,
+                ];
+            }
+        }
+
+        return $records;
+    }
+
+    /**
      * Realiza una petición HTTP GET a la URL especificada.
      *
      * @param string $url

@@ -12,7 +12,8 @@ class Devices extends Model
 
     protected $casts = [
         'services' => 'json',
-        'last_position' => 'json'
+        'last_position' => 'json',
+        'last_alarm_check' => 'integer',
     ];
 
 

@@ -36,8 +36,9 @@
                         </div>
 
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                            @php $svcLabel = $service === 'sateltrack' ? 'Tracklog' : 'Osinergmin'; @endphp
                             <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100" id="modal-title">
-                                Reenviar Historial
+                                Reenviar Historial a {{ $svcLabel }}
                             </h3>
 
                             @if ($device)
@@ -119,7 +120,7 @@
                                         <div class="ml-3">
                                             <p class="text-sm text-blue-700 dark:text-blue-300">
                                                 El rango máximo permitido es de 30 días. Los datos se obtendrán desde la
-                                                API de Protrack y se enviarán a Osinergmin.
+                                                API de Protrack y se enviarán a {{ $svcLabel }}.
                                             </p>
                                         </div>
                                     </div>

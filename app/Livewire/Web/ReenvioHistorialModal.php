@@ -8,6 +8,7 @@ use Livewire\Component;
 use Livewire\Attributes\On;
 use App\Jobs\ReenviarHistorial;
 use Illuminate\Support\Facades\Log;
+use App\Jobs\ReenviarHistorialSatelTrack;
 
 class ReenvioHistorialModal extends Component
 {
@@ -15,6 +16,13 @@ class ReenvioHistorialModal extends Component
     public $device = null;
     public $startDate;
     public $endDate;
+    public $service = 'osinergmin';
+
+    /** Nombres legibles por servicio para mostrar en la UI. */
+    protected array $serviceLabels = [
+        'osinergmin' => 'Osinergmin',
+        'sateltrack' => 'Tracklog',
+    ];
 
     protected $listeners = [
         'openReenvioModalDevice' => 'openModal'
@@ -32,9 +40,10 @@ class ReenvioHistorialModal extends Component
         return view('livewire.web.reenvio-historial-modal');
     }
 
-    public function openModal($deviceId)
+    public function openModal($deviceId, $service = 'osinergmin')
     {
         $this->device = Devices::find($deviceId);
+        $this->service = $service;
 
         if (!$this->device) {
             $this->dispatch(
@@ -99,14 +108,21 @@ class ReenvioHistorialModal extends Component
                 return;
             }
 
-            // Dispatch del job
-            ReenviarHistorial::dispatch(
+            // Dispatch del job según el servicio destino
+            $jobClass = $this->service === 'sateltrack'
+                ? ReenviarHistorialSatelTrack::class
+                : ReenviarHistorial::class;
+
+            $jobClass::dispatch(
                 $this->device->imei,
                 $startDateTime->format('Y-m-d H:i:s'),
                 $endDateTime->format('Y-m-d H:i:s')
             );
 
+            $serviceLabel = $this->serviceLabels[$this->service] ?? $this->service;
+
             Log::info("Job de reenvío de historial despachado manualmente", [
+                'service' => $this->service,
                 'device_imei' => $this->device->imei,
                 'device_plate' => $this->device->plate,
                 'start_date' => $startDateTime->format('Y-m-d H:i:s'),
@@ -118,7 +134,7 @@ class ReenvioHistorialModal extends Component
                 'notify-toast',
                 icon: 'success',
                 title: 'Job Despachado',
-                mensaje: "Se ha iniciado el reenvío de historial para {$this->device->plate} desde {$startDateTime->format('d/m/Y H:i')} hasta {$endDateTime->format('d/m/Y H:i')}"
+                mensaje: "Se ha iniciado el reenvío de historial a {$serviceLabel} para {$this->device->plate} desde {$startDateTime->format('d/m/Y H:i')} hasta {$endDateTime->format('d/m/Y H:i')}"
             );
 
             $this->closeModal();

@@ -122,10 +122,17 @@
                                                 <div class="font-semibold text-left">TYPE</div>
                                             </th>
 
+                                            @php
+                                                $serviceLabels = [
+                                                    'sutran' => 'Sutran',
+                                                    'osinergmin' => 'Osinergmin',
+                                                    'sateltrack' => 'Tracklog',
+                                                ];
+                                            @endphp
                                             @foreach ($servicios->keys()->all() as $service)
                                                 <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
                                                     <div class="font-semibold text-left">
-                                                        {{ $service }}
+                                                        {{ $serviceLabels[$service] ?? ucfirst($service) }}
                                                     </div>
                                                 </th>
                                             @endforeach
@@ -215,7 +222,7 @@
                                                     <div class="flex items-center space-x-2">
                                                         @if (isset($unit->services['osinergmin']) && $unit->services['osinergmin']['active'])
                                                             <button type="button"
-                                                                wire:click="$dispatch('openReenvioModal', { deviceId: {{ $unit->id }} })"
+                                                                wire:click="$dispatch('openReenvioModal', { deviceId: {{ $unit->id }}, service: 'osinergmin' })"
                                                                 class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
                                                                 <svg class="w-3 h-3 mr-1" fill="none"
                                                                     stroke="currentColor" viewBox="0 0 24 24"
@@ -225,7 +232,22 @@
                                                                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
                                                                     </path>
                                                                 </svg>
-                                                                Reenviar
+                                                                Reenviar Osinergmin
+                                                            </button>
+                                                        @endif
+                                                        @if (isset($unit->services['sateltrack']) && $unit->services['sateltrack']['active'])
+                                                            <button type="button"
+                                                                wire:click="$dispatch('openReenvioModal', { deviceId: {{ $unit->id }}, service: 'sateltrack' })"
+                                                                class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors">
+                                                                <svg class="w-3 h-3 mr-1" fill="none"
+                                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-width="2"
+                                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                                                                    </path>
+                                                                </svg>
+                                                                Reenviar Tracklog
                                                             </button>
                                                         @endif
                                                     </div>
@@ -326,6 +348,43 @@
 
                         <div class="col-span-12 text-center flex justify-end">
                             <x-form.button wire:click="saveServicioOsinergmin" spinner="saveServicioOsinergmin"
+                                Positive rounded="md" label="Guardar" />
+                        </div>
+                    </div>
+
+                    {{-- SERVICIO SATELTRACK (TRACKLOG) --}}
+                    <div
+                        class="col-span-12 md:col-span-3 grid grid-cols-12 gap-4 bg-white dark:bg-gray-800 items-start border rounded-md m-3 p-4">
+
+                        <div class="col-span-12 text-center">
+                            <h4 class="text-xl font-bold text-slate-800 dark:text-gray-200">Tracklog</h4>
+                            <span class="text-xs text-slate-500 dark:text-gray-400">Inserción de transmisiones</span>
+                        </div>
+
+                        <div class="col-span-6 text-center">
+
+                            <x-form.checkbox left-label="Activo" value="true" lg id="servicio-sateltrack"
+                                wire:model.live="servicios.sateltrack.status" />
+
+                        </div>
+
+                        <div class="col-span-6 text-center">
+
+                            <x-form.checkbox left-label="Logs Activos" value="true" lg id="logs-sateltrack"
+                                wire:model.live="servicios.sateltrack.enabled_logs" />
+
+                        </div>
+
+                        @if (data_get($servicios, 'sateltrack.status'))
+                            <div class="col-span-12">
+
+                                <x-form.input wire:model.live="servicios.sateltrack.url" label="URL del servicio:"
+                                    description="Endpoint de inserción (ej. http://190.12.73.86/json/json_receive.php)" />
+                            </div>
+                        @endif
+
+                        <div class="col-span-12 text-center flex justify-end">
+                            <x-form.button wire:click="saveServicioSatelTrack" spinner="saveServicioSatelTrack"
                                 Positive rounded="md" label="Guardar" />
                         </div>
                     </div>

@@ -152,6 +152,14 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'sateltrack' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/senders/sateltrack/sateltrack.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 7,
+            'replace_placeholders' => true,
+        ],
+
     ],
 
 ];

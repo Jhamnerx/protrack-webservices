@@ -16,6 +16,7 @@ class Processor implements UnitProcessorInterface
         $result = [
             'sutran' => [],
             'osinergmin' => [],
+            'sateltrack' => [],
         ];
 
         foreach ($units  as $key => $unit) {
@@ -70,6 +71,14 @@ class Processor implements UnitProcessorInterface
                             //     $deviceLastUpdate->format('Y-m-d H:i:s'),
                             //     $now->format('Y-m-d H:i:s')
                             // );
+                        }
+                    }
+
+                    if ($device->services['sateltrack']['active'] ?? false) {
+
+                        if ($unit['datastatus'] == "2" || $unit['datastatus'] == "4") {
+
+                            $result['sateltrack'][] = $unit;
                         }
                     }
 

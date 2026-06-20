@@ -6,6 +6,7 @@ namespace App\Jobs;
 use App\Models\Config;
 use App\Models\Devices;
 use App\Jobs\SendToSutranJob;
+use App\Jobs\SendToSatelTrackJob;
 use App\Jobs\SendToOsinergminJob;
 use Illuminate\Support\Facades\Log;
 use App\Services\Processors\Processor;
@@ -35,14 +36,16 @@ class ProcessUnitsJob implements ShouldQueue
 
         $devices = Devices::where(function ($query) {
             $query->where('services->sutran->active', true)
-                ->orWhere('services->osinergmin->active', true);
+                ->orWhere('services->osinergmin->active', true)
+                ->orWhere('services->sateltrack->active', true);
         })->get();
 
 
         $sutranDevices = $this->filterSutranDevices($devices);
         $osinergminDevices = $this->filterOsinergminDevices($devices);
+        $sateltrackDevices = $this->filterSatelTrackDevices($devices);
 
-        $combinedDevices = array_unique(array_merge($sutranDevices, $osinergminDevices));
+        $combinedDevices = array_unique(array_merge($sutranDevices, $osinergminDevices, $sateltrackDevices));
 
         $protrackService = new ProtrackApiService();
 
@@ -75,7 +78,12 @@ class ProcessUnitsJob implements ShouldQueue
 
         if ($config->servicios['osinergmin']['status'])
             if (!empty($processedUnits['osinergmin'])) {
-                SendToOsinergminJob::dispatch($processedUnits['osinergmin'], 'NavixyDevices');
+                SendToOsinergminJob::dispatch($processedUnits['osinergmin']);
+            }
+
+        if ($config->servicios['sateltrack']['status'] ?? false)
+            if (!empty($processedUnits['sateltrack'])) {
+                SendToSatelTrackJob::dispatch($processedUnits['sateltrack']);
             }
     }
 
@@ -90,6 +98,13 @@ class ProcessUnitsJob implements ShouldQueue
     {
         return $devices->filter(function ($unit) {
             return $unit->services['osinergmin']['active'] ?? false;
+        })->pluck('imei')->toArray();
+    }
+
+    private function filterSatelTrackDevices($devices)
+    {
+        return $devices->filter(function ($unit) {
+            return $unit->services['sateltrack']['active'] ?? false;
         })->pluck('imei')->toArray();
     }
 }

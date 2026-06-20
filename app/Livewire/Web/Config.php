@@ -227,6 +227,35 @@ class Config extends Component
         );
     }
 
+    public function saveServicioSatelTrack()
+    {
+        $this->validate(
+            [
+                'servicios.sateltrack.url' => 'required_if:servicios.sateltrack.status,true|url',
+            ],
+            [
+                'servicios.sateltrack.url.required_if' => 'La URL es requerida cuando el servicio está activo',
+                'servicios.sateltrack.url.url' => 'La URL debe ser una dirección válida (ej. http://servidor/endpoint)',
+            ]
+        );
+
+        $nuevosServicios = array_merge(
+            $this->config->servicios,
+            ['sateltrack' => $this->servicios['sateltrack']]
+        );
+
+        $this->config->update([
+            'servicios' => $nuevosServicios,
+        ]);
+
+        $this->dispatch(
+            'notify-toast',
+            icon: 'success',
+            title: 'SERVICIO ACTUALIZADO',
+            mensaje: 'El servicio de Tracklog se ha actualizado correctamente'
+        );
+    }
+
     public function updatedServicios($value, $name)
     {
         if ($name == 'sutran.status' && $value == false) {
@@ -242,8 +271,8 @@ class Config extends Component
     }
 
     #[On('openReenvioModal')]
-    public function openReenvioModal($deviceId)
+    public function openReenvioModal($deviceId, $service = 'osinergmin')
     {
-        $this->dispatch('openReenvioModalDevice', deviceId: $deviceId);
+        $this->dispatch('openReenvioModalDevice', deviceId: $deviceId, service: $service);
     }
 }
