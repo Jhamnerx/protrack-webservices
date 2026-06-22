@@ -23,6 +23,9 @@ class Config extends Component
     public $search_accounts;
     public array $values = [];
 
+    /** Km inicial/actual del odómetro por dispositivo (id => km), editable en la tabla. */
+    public array $odometros = [];
+
     public function mount()
     {
 
@@ -42,6 +45,11 @@ class Config extends Component
             ->Orwhere('name', 'like', '%' . $this->search . '%')
             ->Orwhere('imei', 'like', '%' . $this->search . '%')
             ->paginate(10, pageName: 'unidades-page');
+
+        // Inicializar el km mostrado por dispositivo (sin pisar lo que el usuario esté editando).
+        foreach ($unidades as $unidad) {
+            $this->odometros[$unidad->id] ??= (int) round(($unidad->odometer_meters ?? 0) / 1000);
+        }
 
         return view('livewire.web.config', compact('unidades'));
     }
@@ -165,6 +173,40 @@ class Config extends Component
         $unit->update([
             'services' => $services->toArray()
         ]);
+    }
+
+    /**
+     * Edita el odómetro (km) de un dispositivo. Se guarda en metros en odometer_meters;
+     * a partir de ahí el odómetro virtual sigue acumulando la distancia recorrida.
+     */
+    public function updateOdometer($deviceId)
+    {
+        $km = $this->odometros[$deviceId] ?? null;
+
+        if (!is_numeric($km) || $km < 0) {
+            $this->dispatch(
+                'notify-toast',
+                icon: 'error',
+                title: 'ERROR',
+                mensaje: 'El kilometraje debe ser un número mayor o igual a 0'
+            );
+            return;
+        }
+
+        $device = Devices::find($deviceId);
+
+        if (!$device) {
+            return;
+        }
+
+        $device->update(['odometer_meters' => (float) $km * 1000]);
+
+        $this->dispatch(
+            'notify-toast',
+            icon: 'success',
+            title: 'ODÓMETRO ACTUALIZADO',
+            mensaje: "Km de {$device->plate} actualizado a {$km} km"
+        );
     }
 
     public function saveServicioSutran()

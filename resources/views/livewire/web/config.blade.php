@@ -249,6 +249,20 @@
                                                                 </svg>
                                                                 Reenviar Tracklog
                                                             </button>
+
+                                                            <div class="flex items-center space-x-1"
+                                                                title="Kilometraje inicial/actual del odómetro (Tracklog)">
+                                                                <input type="number" min="0" step="1"
+                                                                    wire:model.defer="odometros.{{ $unit->id }}"
+                                                                    class="w-24 px-2 py-1 text-xs border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 dark:text-slate-100"
+                                                                    placeholder="Km" />
+                                                                <button type="button"
+                                                                    wire:click="updateOdometer({{ $unit->id }})"
+                                                                    wire:loading.attr="disabled"
+                                                                    class="inline-flex items-center px-2 py-1 border border-transparent text-xs font-medium rounded-md text-white bg-slate-600 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 transition-colors">
+                                                                    Km
+                                                                </button>
+                                                            </div>
                                                         @endif
                                                     </div>
                                                 </td>

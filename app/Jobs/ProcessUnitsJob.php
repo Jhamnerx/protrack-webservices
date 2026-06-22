@@ -81,10 +81,22 @@ class ProcessUnitsJob implements ShouldQueue
                 SendToOsinergminJob::dispatch($processedUnits['osinergmin']);
             }
 
-        if ($config->servicios['sateltrack']['status'] ?? false)
-            if (!empty($processedUnits['sateltrack'])) {
-                SendToSatelTrackJob::dispatch($processedUnits['sateltrack']);
+        if (($config->servicios['sateltrack']['status'] ?? false) && !empty($processedUnits['sateltrack'])) {
+            SendToSatelTrackJob::dispatch($processedUnits['sateltrack']);
+
+            // Avanzar el cursor de deduplicación (last_update) de inmediato. El Sender corre
+            // en otra cola de forma asíncrona; si esperáramos a que él actualice last_update,
+            // el siguiente ciclo (cada 30s) reenviaría la misma posición mientras el envío
+            // sigue encolado, generando duplicados. Avanzar aquí cierra esa ventana.
+            foreach ($processedUnits['sateltrack'] as $u) {
+                if (!empty($u['imei'])) {
+                    Devices::where('imei', $u['imei'])->update([
+                        'last_update' => $u['fecha_hora'],
+                        'latest_position_id' => $u['hearttime'],
+                    ]);
+                }
             }
+        }
     }
 
     private function filterSutranDevices($devices)

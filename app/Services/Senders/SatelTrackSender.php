@@ -62,6 +62,10 @@ class SatelTrackSender implements UnitSenderInterface
             return;
         }
 
+        // Evitar registros repetidos: una misma placa no debe enviarse dos veces
+        // con la misma fecha/hora de evento dentro del mismo lote.
+        $tramas = $this->dedupeTramas($tramas);
+
         Log::channel('sateltrack')->info('Iniciando envío de batch', [
             'total_tramas' => count($tramas),
             'url' => $url,
@@ -218,6 +222,27 @@ class SatelTrackSender implements UnitSenderInterface
         return array_intersect_key($trama, array_flip($this->wireKeys));
     }
 
+    /**
+     * Elimina tramas duplicadas dentro del lote usando placa + fecha + hora de evento
+     * como clave. Conserva la primera ocurrencia.
+     */
+    protected function dedupeTramas(array $tramas): array
+    {
+        $unicas = [];
+
+        foreach ($tramas as $trama) {
+            $clave = strtoupper(trim($trama['placa'] ?? '')) . '|'
+                . ($trama['fechaEvento'] ?? '') . '|'
+                . ($trama['horaEvento'] ?? '');
+
+            if (!isset($unicas[$clave])) {
+                $unicas[$clave] = $trama;
+            }
+        }
+
+        return array_values($unicas);
+    }
+
     protected function updateDevice(array $trama): void
     {
         if (!$this->updateDevices) {
@@ -228,12 +253,25 @@ class SatelTrackSender implements UnitSenderInterface
             $device = Devices::where('imei', $trama['imei'])->first();
 
             if ($device) {
-                $device->update([
+                $payload = [
                     'last_status' => $trama['evento'],
                     'last_position' => $trama['geo'],
                     'last_update' => $trama['time_device'],
                     'latest_position_id' => $trama['idTrama'],
-                ]);
+                ];
+
+                // Avanzar el estado de ACC solo cuando se conoce (no sobreescribir con -1),
+                // para que la próxima transición motor on/off se detecte correctamente.
+                if (isset($trama['accstatus']) && $trama['accstatus'] !== -1) {
+                    $payload['last_accstatus'] = $trama['accstatus'];
+                }
+
+                // Persistir el odómetro virtual acumulado (distancia entre puntos).
+                if (isset($trama['odometer_meters'])) {
+                    $payload['odometer_meters'] = $trama['odometer_meters'];
+                }
+
+                $device->update($payload);
             }
         } catch (\Exception $e) {
             Log::channel('sateltrack')->error('Error al actualizar el dispositivo tras envío a SatelTrack', [

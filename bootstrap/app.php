@@ -33,7 +33,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
     })->withSchedule(function (Schedule $schedule) {
 
-        $schedule->command('api:get')->everyThirtySeconds()->runInBackground();
+        $schedule->command('api:get')->everyThirtySeconds()->withoutOverlapping()->runInBackground();
         $schedule->command('sateltrack:alarms')->everyMinute()->withoutOverlapping()->runInBackground();
         $schedule->command('protrack:refresh-token')->hourly()->runInBackground();
         $schedule->job(new ClearLogs(3))->daily();

@@ -14,6 +14,8 @@ class Devices extends Model
         'services' => 'json',
         'last_position' => 'json',
         'last_alarm_check' => 'integer',
+        'last_accstatus' => 'integer',
+        'odometer_meters' => 'float',
     ];
 
 
