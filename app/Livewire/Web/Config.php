@@ -213,11 +213,11 @@ class Config extends Component
     {
         $datos = $this->validate(
             [
-                'servicios.sutran.token' => 'required_if:servicios.sutran.status,true',
+                'servicios.sutran.token' => 'required_if:servicios.sutran.status,true|regex:/^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12}$/',
             ],
             [
                 'servicios.sutran.token.required_if' => 'El token es requerido cuando el servicio está activo',
-                'servicios.sutran.token.regex' => 'El token debe tener el formato 8-4-4-4-12 con caracteres alfanuméricos',
+                'servicios.sutran.token.regex' => 'El token debe tener 32 caracteres alfanuméricos',
             ]
         );
 
@@ -243,7 +243,7 @@ class Config extends Component
 
         $this->validate(
             [
-                'servicios.osinergmin.token' => 'required_if:servicios.osinergmin.status,true|regex:/^[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}$/',
+                'servicios.osinergmin.token' => 'required_if:servicios.osinergmin.status,true',
             ],
             [
                 'servicios.osinergmin.token.regex' => 'El token debe tener 32 caracteres alfanuméricos',
