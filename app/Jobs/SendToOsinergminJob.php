@@ -31,7 +31,7 @@ class SendToOsinergminJob implements ShouldQueue
         $formatter = new OsinergminFormatter($transformer);
         $tramas = $formatter->format($this->units);
 
-        $url = "https://thunder.osinergmin-agent-2021.com/api/v1/trama";
+        $url = "https://pmgo.osinergmin.gob.pe/api-gps-ingesta/api/v1/trama";
 
         $sender = new OsinergminSender();
         $sender->send($tramas, $url);
