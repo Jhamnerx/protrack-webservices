@@ -217,7 +217,7 @@ class Config extends Component
             ],
             [
                 'servicios.sutran.token.required_if' => 'El token es requerido cuando el servicio está activo',
-                'servicios.sutran.token.regex' => 'El token debe tener 32 caracteres alfanuméricos',
+                'servicios.sutran.token.regex' => 'El token debe tener el formato 8-4-4-4-12 con caracteres alfanuméricos',
             ]
         );
 
