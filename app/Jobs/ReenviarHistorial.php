@@ -110,7 +110,7 @@ class ReenviarHistorial implements ShouldQueue
                     'altitude' => doubleval(0),
                 ],
                 'tokenTrama' => $config->servicios['osinergmin']['token'],
-                'odometer' => round(1),
+                'odometer' => 0, // el playback de Protrack no trae odometro; PMGO exige entero >= 0
                 'imei' => $device->imei,
                 'idTrama' => $device->imei . '_' . $unit['gpstime'], // ID único para cada trama
             ];

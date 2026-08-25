@@ -114,6 +114,17 @@ Scheduler (sateltrack:alarms cada 1 min, withoutOverlapping)
 - **Reenvío de historial**: `ReenviarHistorialSatelTrack` (mismo modal que Osinergmin, pasando `service='sateltrack'`).
 - **Migración**: `2026_06_20_000000_add_sateltrack_service_to_config_and_devices.php` agrega `sateltrack` al JSON `servicios` de `config` y al JSON `services` de cada `device` existente. **Pendiente de ejecutar** (`php artisan migrate`) cuando MySQL esté disponible.
 
+## Servicio Osinergmin (PMGO)
+
+Contrato definido en el *Manual técnico de integración PMGO - EMV*.
+
+- **Endpoint**: `POST https://pmgo.osinergmin.gob.pe/api-gps-ingesta/api/v1/trama` (producción) — `Content-Type: application/json`. Requiere IP pública en lista blanca + token de EMV.
+- **Payload (§2.2)**: exactamente `event`, `plate`, `speed`, `gpsDate`, `tokenTrama`, `odometer`, `position{latitude,longitude,altitude}` y `uuid` (opcional, solo batch). `OsinergminSender::CONTRACT_FIELDS` + `buildPayload()` filtran el body: `id`, `imei` e `idTrama` son metadata interna del sender (bookkeeping de `Devices`) y **no se envían**.
+- **`odometer`**: **entero** en km, nunca negativo. Protrack devuelve `odometer = -1` cuando el equipo no lo soporta, y ese valor provocaba `422 Unprocessable Entity`. `OsinergminFormatter::resolveOdometer()` reporta el valor de Protrack solo si es un **entero positivo**; cualquier otra cosa (-1, decimal, null, texto, ausente) se envía como `0`. El reenvío de historial también manda `0` porque el playback de Protrack no trae odómetro.
+- **`event`**: solo `none`, `acc_on`, `acc_off`, `battery_dc`, `battery_ct`, `sos`.
+- **Respuestas**: éxito = **HTTP 202** con `status: "ACCEPTED"` (`OsinergminSender::isAccepted()` acepta también `CREATED` por compatibilidad); error de datos = **HTTP 422** con `{message, timestamp, status: "ERROR"}`.
+- **Logs**: el body de la respuesta Guzzle es un stream de **una sola pasada**; el catch lo lee con `readBody()` (rebobina) y se lo pasa a `logError()`, que guarda en BD la respuesta real de la API. Antes se releía el stream ya consumido y todas las filas de `logs` quedaban como `"Error de conexión - No suggestion"`.
+
 ## Notas / deuda técnica observada
 
 - `SutranSender` tiene métodos muertos (`getConfigModelBySource`, `getDevicesModelBySource`, `getIdFieldBySource`) que referencian modelos `WoxDevices`/`WialonDevices`/`NavixyDevices` que no existen en `app/Models` — parecen de una integración multi-origen no completada.

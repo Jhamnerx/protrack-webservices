@@ -22,6 +22,13 @@ class OsinergminSender implements UnitSenderInterface
     protected $maxConcurrentRequests = 5;
     protected $senderName = 'Osinergmin';
 
+    /**
+     * Campos que acepta el contrato de la API de ingesta PMGO (manual tecnico PMGO-EMV, seccion 2.2).
+     * El resto de claves de la trama (id, imei, idTrama) son metadata interna del sender
+     * y no deben viajar en el body.
+     */
+    protected const CONTRACT_FIELDS = ['event', 'plate', 'speed', 'gpsDate', 'tokenTrama', 'odometer', 'position', 'uuid'];
+
     public function __construct()
     {
         $this->logService = app(LogService::class);
@@ -62,20 +69,21 @@ class OsinergminSender implements UnitSenderInterface
                     'headers' => [
                         'Content-Type' => 'application/json',
                     ],
-                    'body' => json_encode($trama),
+                    'body' => json_encode($this->buildPayload($trama)),
                 ]);
 
-                $responseBody = json_decode($response->getBody()->getContents(), true);
+                $responseBody = json_decode($this->readBody($response) ?? '', true);
 
                 Log::channel('osinergmin')->debug('Respuesta de Osinergmin', [
                     'plate' => $trama['plate'] ?? 'N/A',
                     'imei' => $trama['imei'] ?? 'N/A',
+                    'http_status' => $response->getStatusCode(),
                     'response' => $responseBody,
                 ]);
 
-                if (isset($responseBody['status']) && $responseBody['status'] === 'CREATED') {
+                if ($this->isAccepted($response->getStatusCode(), $responseBody)) {
                     $successCount++;
-                    $this->handleSuccess($responseBody, $trama);
+                    $this->handleSuccess($responseBody ?? [], $trama);
                 } else {
                     $failedCount++;
                     $this->handleError($responseBody, $trama);
@@ -83,22 +91,20 @@ class OsinergminSender implements UnitSenderInterface
             } catch (RequestException $e) {
                 $failedCount++;
 
-                $errorResponse = null;
-                if ($e->hasResponse()) {
-                    $errorResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
-                }
+                $rawError = $e->hasResponse() ? $this->readBody($e->getResponse()) : null;
+                $errorResponse = $rawError !== null ? json_decode($rawError, true) : null;
 
                 Log::channel('osinergmin')->error('Error al enviar trama', [
                     'plate' => $trama['plate'] ?? 'N/A',
                     'imei' => $trama['imei'] ?? 'N/A',
                     'event' => $trama['event'] ?? 'N/A',
                     'error' => $e->getMessage(),
-                    'api_response' => $errorResponse,
-                    'trama' => $trama
+                    'api_response' => $errorResponse ?? $rawError,
+                    'trama' => $this->buildPayload($trama)
                 ]);
 
                 if ($this->config->servicios['osinergmin']['enabled_logs']) {
-                    $this->logError($e, $trama);
+                    $this->logError($e, $trama, $errorResponse, $rawError);
                 }
             } catch (\Exception $e) {
                 $failedCount++;
@@ -144,7 +150,7 @@ class OsinergminSender implements UnitSenderInterface
                             'headers' => [
                                 'Content-Type' => 'application/json',
                             ],
-                            'body' => json_encode($trama),
+                            'body' => json_encode($this->buildPayload($trama)),
                             'trama' => $trama, // Pasar la trama como metadata
                         ]);
                     };
@@ -155,18 +161,19 @@ class OsinergminSender implements UnitSenderInterface
                 'concurrency' => $this->maxConcurrentRequests,
                 'fulfilled' => function (ResponseInterface $response, $index) use ($chunk, &$successCount, &$failedCount) {
                     try {
-                        $responseBody = json_decode($response->getBody()->getContents(), true);
+                        $responseBody = json_decode($this->readBody($response) ?? '', true);
                         $trama = $chunk[$index];
 
                         Log::channel('osinergmin')->debug('Respuesta de Osinergmin (batch)', [
                             'plate' => $trama['plate'] ?? 'N/A',
                             'imei' => $trama['imei'] ?? 'N/A',
+                            'http_status' => $response->getStatusCode(),
                             'response' => $responseBody,
                         ]);
 
-                        if (isset($responseBody['status']) && $responseBody['status'] === 'CREATED') {
+                        if ($this->isAccepted($response->getStatusCode(), $responseBody)) {
                             $successCount++;
-                            $this->handleSuccess($responseBody, $trama);
+                            $this->handleSuccess($responseBody ?? [], $trama);
                         } else {
                             $failedCount++;
                             $this->handleError($responseBody, $trama);
@@ -183,22 +190,22 @@ class OsinergminSender implements UnitSenderInterface
                     $failedCount++;
                     $trama = $chunk[$index];
 
-                    $errorResponse = null;
-                    if ($reason instanceof RequestException && $reason->hasResponse()) {
-                        $errorResponse = json_decode($reason->getResponse()->getBody()->getContents(), true);
-                    }
+                    $rawError = ($reason instanceof RequestException && $reason->hasResponse())
+                        ? $this->readBody($reason->getResponse())
+                        : null;
+                    $errorResponse = $rawError !== null ? json_decode($rawError, true) : null;
 
                     Log::channel('osinergmin')->error('Error al enviar trama en batch', [
                         'plate' => $trama['plate'] ?? 'N/A',
                         'imei' => $trama['imei'] ?? 'N/A',
                         'event' => $trama['event'] ?? 'N/A',
                         'error' => $reason instanceof \Exception ? $reason->getMessage() : (string) $reason,
-                        'api_response' => $errorResponse,
-                        'trama' => $trama
+                        'api_response' => $errorResponse ?? $rawError,
+                        'trama' => $this->buildPayload($trama)
                     ]);
 
                     if ($reason instanceof RequestException && $this->config->servicios['osinergmin']['enabled_logs']) {
-                        $this->logError($reason, $trama);
+                        $this->logError($reason, $trama, $errorResponse, $rawError);
                     }
                 }
             ]);
@@ -239,8 +246,8 @@ class OsinergminSender implements UnitSenderInterface
                 'Osinergmin',
                 $trama['plate'],
                 'success',
-                $trama,
-                ['message' => $response],
+                $this->buildPayload($trama),
+                $response,
                 [],
                 Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
                 $trama['imei']
@@ -265,7 +272,7 @@ class OsinergminSender implements UnitSenderInterface
 
     protected function handleError(?array $response, array $trama): void
     {
-        $errorMessage = ($response['message'] ?? 'Sin mensaje') . ' - ' . ($response['suggestion'] ?? 'Sin sugerencia');
+        $errorMessage = $response['message'] ?? 'Sin mensaje';
 
         // Log de error siempre
         Log::channel('osinergmin')->error('Error respuesta de Osinergmin', [
@@ -282,9 +289,9 @@ class OsinergminSender implements UnitSenderInterface
                 '',
                 'Osinergmin',
                 $trama['plate'],
-                $response['status'] ?? 'error',
-                $trama,
-                ['message' => $errorMessage],
+                'error',
+                $this->buildPayload($trama),
+                $response ?? ['message' => $errorMessage],
                 [],
                 Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
                 $trama['imei']
@@ -292,37 +299,76 @@ class OsinergminSender implements UnitSenderInterface
         }
     }
 
-    protected function logError(RequestException $e, array $trama): void
+    /**
+     * Guarda en BD el error tal cual lo devolvio la API.
+     *
+     * El body ya viene leido desde el catch: el stream de la respuesta es de una sola
+     * pasada y volver a llamar a getContents() aqui devolvia siempre cadena vacia; por eso
+     * todos los logs de BD terminaban como "Error de conexion - No suggestion" en vez del 422 real.
+     */
+    protected function logError(RequestException $e, array $trama, ?array $body = null, ?string $raw = null): void
     {
-        if ($e->hasResponse()) {
-            $response = $e->getResponse();
-            $body = json_decode($response->getBody()->getContents(), true);
-
-            $this->logService->logToDatabase(
-                '',
-                'Osinergmin',
-                $trama['plate'],
-                $body['status'] ?? 'error',
-                $trama,
-                ['message' => ($body['message'] ?? 'Error de conexión') . ' - ' . ($body['suggestion'] ?? 'No suggestion')],
-                [],
-                Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
-                $trama['imei']
-            );
+        if ($body !== null) {
+            $response = $body;                                   // JSON devuelto por PMGO (422, etc.)
+        } elseif ($raw !== null && trim($raw) !== '') {
+            $response = ['message' => $raw];                     // respuesta no JSON (HTML, texto plano)
         } else {
-            // Error sin respuesta (conexión, timeout, etc.)
-            $this->logService->logToDatabase(
-                '',
-                'Osinergmin',
-                $trama['plate'],
-                'error',
-                $trama,
-                ['message' => 'Error de conexión: ' . $e->getMessage()],
-                [],
-                Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
-                $trama['imei']
-            );
+            $response = ['message' => 'Error de conexion: ' . $e->getMessage()]; // timeout, DNS, etc.
         }
+
+        $this->logService->logToDatabase(
+            '',
+            'Osinergmin',
+            $trama['plate'],
+            'error',
+            $this->buildPayload($trama),
+            $response,
+            [],
+            Carbon::parse($trama['gpsDate'])->setTimezone('America/Lima')->format('Y-m-d H:i:s'),
+            $trama['imei']
+        );
+    }
+
+    /**
+     * Body de la respuesta como string. Rebobina el stream porque Guzzle lo entrega de una
+     * sola pasada y puede haberse consumido antes (logging, reintentos).
+     */
+    protected function readBody(?ResponseInterface $response): ?string
+    {
+        if (!$response) {
+            return null;
+        }
+
+        $stream = $response->getBody();
+
+        if ($stream->isSeekable()) {
+            $stream->rewind();
+        }
+
+        return $stream->getContents();
+    }
+
+    /**
+     * La trama fue aceptada por PMGO: HTTP 2xx (202 Accepted segun el manual) y status
+     * ACCEPTED en el body. Se acepta tambien CREATED por compatibilidad con la version
+     * anterior de la API.
+     */
+    protected function isAccepted(int $statusCode, ?array $body): bool
+    {
+        if ($statusCode < 200 || $statusCode >= 300) {
+            return false;
+        }
+
+        return in_array(strtoupper($body['status'] ?? 'ACCEPTED'), ['ACCEPTED', 'CREATED'], true);
+    }
+
+    /**
+     * Deja en el body solo los campos del contrato PMGO (self::CONTRACT_FIELDS),
+     * descartando la metadata interna del sender (id, imei, idTrama).
+     */
+    protected function buildPayload(array $trama): array
+    {
+        return array_intersect_key($trama, array_flip(self::CONTRACT_FIELDS));
     }
 
     protected function updateCounterService(int $successCount, int $failedCount, int $totalSent): void
